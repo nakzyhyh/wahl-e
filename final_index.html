@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wahl-E</title>
+    <link rel="stylesheet" href="final_styles.css">
+</head>
+<body>
+<header>
+    <h1 class="logo">WAHL-<span class="accent">E</span></h1>
+    <p>Finde heraus, welche Partei zu dir passt!</p>
+</header>
+<main>
+    <div id="question-container">
+        <h2 id="question-headline"></h2>
+        <p id="question-text"></p>
+        <p id="question-explanation"></p>
+        <div id="options"></div>
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    <div id="result-container" class="hidden">
+        <h2>Dein Ergebnis</h2>
+        <div id="results"></div>
+        <button onclick="location.reload()">Neu starten</button>
+    </div>
+</main>
+<script src="final_script.js"></script>
+</body>
+</html>

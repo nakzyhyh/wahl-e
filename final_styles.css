@@ -1,0 +1,96 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #00274d;
+    color: white;
+    padding: 20px;
+}
+
+header .logo {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+header .accent {
+    color: #ffcc00;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#progress-bar {
+    width: 100%;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+#progress {
+    width: 0;
+    height: 10px;
+    background-color: #ffcc00;
+    transition: width 0.3s;
+}
+
+#options button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#options button:hover {
+    background-color: #45a049;
+}
+
+#question-headline {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#question-explanation {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#results th, #results td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#results th {
+    background-color: #333;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
