@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wahl-E</title>
+    <link rel="stylesheet" href="final_styles.css">
+    <style>
+        /* Verbesserte Abstände und Layout */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+        }
+
+        main {
+            margin: 0 auto;
+            padding: 20px 10px;
+            max-width: 1000px;
+        }
+
+        footer {
+            background-color: #00274d;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        footer .footer-section {
+            max-width: 300px;
+            text-align: left;
+        }
+
+        footer .footer-bottom {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #555;
+        }
+
+        #results, #question-container, #result-container {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header mit Hintergrundbild -->
+    <header class="header-with-background" style="background-image: url('pexels-element5-1550337.jpg'); background-size: cover; background-position: center;">
+        <h1 class="logo">WAHL-<span class="accent">E</span></h1>
+        <p class="slogan">Deine Politik. Deine Entscheidung. Deine Transparenz.</p>
+    </header>
+
+    <!-- Transparenz-Text -->
+    <section class="transparency-section">
+        <div class="transparency-content">
+            <div class="transparency-text">
+                <h2>Transparenz und Neutralität im Fokus</h2>
+                <p>
+                    <strong>Wahl-E</strong> möchte die politischen Entscheidungsprozesse für Wähler transparenter machen. Viele Wahltools, wie der Wahl-O-Mat, sind hinsichtlich der eingespeisten Informationen und Gewichtungen undurchsichtig. Wahl-E setzt dem eine offene Struktur entgegen, bei der der Nutzer jeden Schritt nachvollziehen kann. Es geht darum, politisches Wissen zu fördern und eine informierte Wahlentscheidung zu unterstützen.
+                </p>
+            </div>
+            <div class="transparency-cards">
+                <div class="card">
+                    <h3>Klare Berechnungen</h3>
+                    <p>Alle Ergebnisse basieren auf einer einfachen und fairen Formel.</p>
+                </div>
+                <div class="card">
+                    <h3>Offene Informationen</h3>
+                    <p>Alle Fragen, Antworten und Ergebnisse sind vollständig einsehbar.</p>
+                </div>
+                <div class="card">
+                    <h3>Neutralität</h3>
+                    <p>Parteien werden ausschließlich auf Grundlage ihrer Positionen bewertet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="start-generator">
+        <h2>Entdecke Deine politische Übereinstimmung</h2>
+        <p>Jetzt starten und informierte Entscheidungen treffen!</p>
+        <button onclick="goToQuestionnaire()">Loslegen</button>
+    </section>
+    
+    <!-- Hauptinhalt -->
+    <main>
+        <div id="question-container">
+            <h2 id="question-headline">Fragenüberschrift</h2>
+            <p id="question-text">Fragentext...</p>
+            <p id="question-explanation">Erklärung...</p>
+            <div id="options"></div>
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <p id="progress-text">Fortschritt</p>
+        </div>
+
+        <div id="result-container" class="hidden">
+            <h2>Dein Ergebnis</h2>
+            <div id="results"></div>
+            <button onclick="location.reload()">Neu starten</button>
+        </div>
+    </main>
+  <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Über Wahl-E</h2>
+                <p>Wahl-E ist ein Tool für Transparenz und Neutralität...</p>
+            </div>
+            <div class="footer-section">
+                <h2>Kontakt</h2>
+                <p>Email: kaihoelters@icloud.com</p>
+            </div>
+            <div class="footer-section">
+                <h2>GitHub-Projekt</h2>
+                <p>
+                    Schaue dir den Quellcode und weitere Informationen auf <a href="https://github.com/nakzyhyh" target="_blank">GitHub</a> an.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Wahl-E. Alle Rechte vorbehalten. Erstellt von Kai Hölters.</p>
+        </div>
+    </footer>
+    <script src="final_script.js"></script>
+</body>
+</html>
