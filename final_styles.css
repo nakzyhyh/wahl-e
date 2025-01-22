@@ -1,0 +1,433 @@
+/* Basis-Stile für die Webseite */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+    text-align: center;
+    box-sizing: border-box; /* Einheitliches Box-Modell */
+}
+
+/* Globale Box-Sizing-Einstellungen */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    background-color: #00274d;
+    color: white;
+    padding: 20px;
+}
+
+header .logo {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+header .accent {
+    color: #ffcc00;
+}
+
+/* USP-Banner */
+.usp-banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #00274d;
+    color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ffcc00;
+}
+
+.usp-item {
+    flex: 1 1 calc(25% - 10px);
+    margin: 5px;
+    padding: 10px;
+    background-color: #004080;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: #ffcc00;
+}
+
+/* USP-Banner: Mobile Ansicht */
+@media (max-width: 768px) {
+    .usp-item {
+        flex: 1 1 100%;
+        margin: 5px 0;
+    }
+}
+
+/* Fortschrittsbalken */
+#progress-bar {
+    width: 80%;
+    margin: 10px auto;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress {
+    width: 0;
+    height: 10px;
+    background-color: #ffcc00;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Start-Generator */
+.start-generator {
+    background-color: #004080;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.start-generator button:hover {
+    animation: pulse 1s infinite;
+    transform-origin: center;
+}
+
+/* Fragebereich */
+#question-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Optionen (JA, NEIN, NEUTRAL) */
+#options {
+    display: flex;
+    justify-content: center; /* Zentriert die Buttons */
+    gap: 15px; /* Abstand zwischen den Buttons */
+    margin: 20px 0;
+}
+
+#options button {
+    flex: 0 1 auto;
+    max-width: 180px;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #004080;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#options button:hover {
+    background-color: #00274d;
+}
+
+/* Ergebnisbereich */
+#result-container {
+    margin: 40px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.result-party {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.result-bar-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 25px;
+}
+
+.result-bar {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+}
+
+.result-description {
+    font-size: 0.9em;
+    color: #555;
+    text-align: justify;
+    max-width: 600px;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #00274d;
+    color: white;
+    padding: 20px 10px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+footer h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+/* Transparenz-Sektion */
+.transparency-section {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f0f4f8, #dfe8f1);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.transparency-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+/* Mobile Ansicht */
+@media (max-width: 768px) {
+    .transparency-cards {
+        flex-direction: column; /* Karten vertikal anordnen */
+        align-items: center;    /* Karten in der Mitte ausrichten */
+        gap: 20px;              /* Abstand zwischen den Karten */
+    }
+
+    .card {
+        width: 90%;             /* Kartenbreite auf 90% des Containers begrenzen */
+        max-width: 400px;       /* Maximale Breite der Karten */
+        margin: 10px 0;         /* Vertikaler Abstand zwischen den Karten */
+    }
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Standardabstand zwischen den Karten */
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 20px); /* Drei Karten pro Zeile bei größeren Bildschirmen */
+    margin: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Gemeinsamer Button-Stil */
+button {
+    background-color: #ffcc00;
+    color: #004080;
+    padding: 12px 40px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Animationen */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.start-generator button:hover {
+    animation: pulse 1s infinite;
+    transform-origin: center;
+}
+/* =============================
+   NEUES CSS FÜR DIE ERGEBNISSE
+   ============================= */
+
+/* Container für jede "Karte" in der Ergebnisliste */
+.result-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px; 
+    padding: 20px;
+    text-align: left; /* Damit die Texte nicht alle zentriert sind */
+    transition: transform 0.2s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-3px); /* leichter Hover-Effekt */
+}
+
+/* Titel / Parteiname */
+.result-card .party-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Kurze Beschreibung oder Kernausrichtung */
+.result-card .core-message {
+    font-size: 0.95em;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+/* Fortschrittsbalken-Container */
+.progress-bar-container {
+    background-color: #eee;
+    border-radius: 8px;
+    height: 25px;
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative; /* Für das Label */
+}
+
+/* Tatsächlicher Balken */
+.progress-bar-fill {
+    height: 100%;
+    background-color: #ffcc00; /* Standard: gelblich, du kannst es anpassen */
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Text ans rechte Ende */
+    padding-right: 8px;
+    color: #333;
+    font-weight: bold;
+    transition: width 0.5s ease;
+}
+
+/* Farbige Balken pro Partei (falls du unterschiedliche Farben möchtest) */
+.progress-bar-fill.spd {
+    background-color: #E3000F; /* Rot */
+}
+.progress-bar-fill.cdu {
+    background-color: #000000; /* Schwarz */
+}
+.progress-bar-fill.gruene {
+    background-color: #1FAA56; /* Grün */
+}
+.progress-bar-fill.fdp {
+    background-color: #FFED00; /* Gelb */
+    color: #333;
+    font-weight: bold;
+}
+.progress-bar-fill.afd {
+    background-color: #0089D0; /* Blau */
+}
+.progress-bar-fill.linke {
+    background-color: #BE3075; /* Magenta */
+}
+.progress-bar-fill.bsw {
+    background-color: #888; /* kannst du anpassen */
+}
+
+/* Partei-Info (Prozentzahl) daneben/ darüber */
+.percentage-label {
+    margin-left: 8px;
+    font-weight: bold;
+    color: #333;
+}
+.result-card .core-message {
+    font-size: 0.95em;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+/* NEU: "Mehr Anzeigen"-Funktion */
+.full-text.hidden {
+    display: none;
+}
+
+.toggle-text-btn {
+    background-color: transparent;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+.toggle-text-btn:hover {
+    color: #0056b3;
+}
+
+.core-message {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
