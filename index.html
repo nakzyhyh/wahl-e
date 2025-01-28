@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wahl-E</title>
+  <link rel="stylesheet" href="final_styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Styles für die Menüleiste */
+    .main-nav {
+      display: flex;
+      justify-content: center; /* Menüleiste zentrieren */
+      align-items: center;
+      background-color: #00274d;
+      color: white;
+      padding: 10px 20px;
+    }
+    .main-nav .nav-links {
+      align-items: center;
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+    .main-nav .nav-links li {
+      padding: 5px 10px;
+      align-items: center;
+    }
+    .main-nav .nav-links a {
+      color: #ffcc00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .main-nav .nav-links a:hover {
+      color: #e6b800;
+    }
+    .main-nav .nav-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .main-nav .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #00274d;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      .main-nav .nav-links.show-links {
+        display: flex;
+      }
+      .main-nav .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    /* Styles für die Cards mit Icons */
+    .header-with-background {
+      height: 35vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slogan {
+      font-size: 1.2em;
+      margin-top: 20px;
+      color: #ffcc00;
+    }
+
+    .transparency-section {
+      padding: 20px 40px;
+      background: linear-gradient(140deg, #f0f4f8, #dfe8f1);
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .transparency-text h2 {
+      font-size: 1.5em;
+      color: #00274d;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .transparency-cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 0 40px;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+    .card .icon {
+      font-size: 2em;
+      color: #00274d;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      margin: 10px 0;   }
+
+.details {
+  display: none;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.start-generator {
+  background-color: #004080;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.start-generator h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.start-generator button {
+  background-color: #ffcc00;
+  color: #004080;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+    .card p {
+      margin: 10px 0;
+    }
+    .card button {
+      background-color: #ffcc00;
+      color: #00274d;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .card button:hover {
+      background-color: #e6b800;
+      .start-generator button:hover {
+      background-color: #e6b800;
+      transform: scale(1.1);
+      }
+      transform: scale(1.1);
+    }
+
+    #question-container {
+      padding: 30px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    #progress-bar {
+      margin-top: 20px;
+      background-color: #e6e6e6;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    #progress {
+      height: 15px;
+      background-color: #ffcc00;
+      transition: width 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header mit Hintergrundbild -->
+  <header class="header-with-background" style="background-image: url('pexels-element5-1550337.jpg');">
+    <h1 class="logo">WAHL-<span class="accent">E</span></h1>
+    <p class="slogan">Deine Politik. Deine Entscheidung. Deine Transparenz.</p>
+  </header>
+ <!-- Nav-Leiste -->
+  <nav class="main-nav">
+    <a href="#" class="logo">
+    </a>
+    
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    
+    <ul class="nav-links">
+        <li><a href="#home">Start</a></li>
+        <li><a href="#about">Über uns</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+    </ul>
+</nav>
+
+<!-- Countdown-Sektion mit Partei-Logos -->
+<section class="countdown-generator-section">
+  <div class="countdown-area">
+    <div class="party-logos-container">
+      <img src="./1cc4455c-bd0b-47c2-ac97-e93e62dc61b9.jpg" alt="CDU" class="party-logo">
+      <img src="./9be1a19c-3747-40a8-ba55-c04857d434c9.jpg" alt="AfD" class="party-logo">
+      <img src="./a358d027-061b-4ab6-90d8-d3a39a000ad8.jpg" alt="Bündnis 90/Die Grünen" class="party-logo">
+      <img src="./a7053fbf-fa22-432d-a29b-21587cb883bf.jpg" alt="SPD" class="party-logo">
+      <img src="./c829d625-76a7-44e2-aa39-1d5dcf2c6f77.jpg" alt="DIE LINKE" class="party-logo">
+      <img src="./e8284bc7-75aa-4bc9-8c5e-d7dd8dad9e41.jpg" alt="FDP" class="party-logo">          
+    </div>
+    <h1 class="gradient-text">Neuwahlen 2025</h1>
+    <p>Im kommenden Jahr wird ein neuer Bundestag gewählt.</p>
+    <p>
+      Bundespräsident Frank-Walter Steinmeier hat den 23. Februar 2025 als Termin für die vorgezogenen Neuwahlen festgelegt.
+    </p>
+    <p>
+      Nach dem Auseinanderbrechen der Regierungskoalition im November und der verlorenen Vertrauensfrage von Bundeskanzler Olaf Scholz wurde das Parlament aufgelöst. 
+      Nun sind die Bürger gefragt, ihre Stimme für die Zukunft Deutschlands abzugeben.
+    </p>
+    <div id="countdown">
+      <span id="days">0</span> Tage 
+      <span id="hours">0</span> Stunden 
+      <span id="minutes">0</span> Minuten 
+      <span id="seconds">0</span> Sekunden
+    </div>
+  </div>
+  
+  <div class="generator-area">
+    <h1>Finde deine Wahlentscheidung!</h1>
+    <i class="fas fa-check-circle icon"></i>
+    <p>Wahl-E bietet dir eine einzigartige Möglichkeit, politische Fragen gezielt zu beantworten, deine persönlichen Themenprioritäten anzupassen und so eine transparente, neutrale und fundierte Wahlentscheidung zu treffen, die genau zu deinen Werten und Zielen passt.</p>
+    <button id="start-quiz-btn">Starte deinen Parteienvergleich</button>
+  </div>
+</section>
+
+<style>
+/* Logos nebeneinander und rechtsbündig ausrichten */
+.party-logos-container {
+  display: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.party-logo {
+  max-width: 80px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+<!-- Transparenz-Sektion -->
+<section class="transparency-section">
+  <div class="container">
+    <div class="transparency-text">
+      <h2>Transparenz und Neutralität im Fokus</h2>
+      <p>
+        Politik muss nicht kompliziert sein! <strong>Wahl-E</strong> macht politische Entscheidungsprozesse für dich transparenter und nachvollziehbar. Während viele Wahltools undurchsichtige Methoden nutzen, setzt Wahl-E auf Offenheit:
+      </p>
+      <ul class="features-list">
+        <li><strong>Transparenz:</strong> Verstehe jeden Schritt – von der Herkunft der Daten bis zur Berechnung der Ergebnisse.</li>
+        <li><strong>Neutralität:</strong> Ergebnisse basieren nur auf objektiven Fakten – keine Manipulation, keine Vorurteile.</li>
+        <li><strong>Wissen:</strong> Fördere dein politisches Verständnis und treffe fundierte Entscheidungen.</li>
+      </ul>
+      <p>
+        Mit Wahl-E siehst du klar – und findest die Partei, die zu dir passt.
+      </p>
+    </div>
+  </div>
+</section>
+
+      <div class="transparency-cards">
+        <div class="card">
+          <i class="fas fa-calculator icon"></i> <!-- Icon für Klare Berechnungen -->
+          <h3>Klare Berechnungen</h3>
+          <p>Alle Ergebnisse basieren auf einer einfachen und fairen Formel.</p>
+          <button class="toggle-button" aria-expanded="false">Mehr anzeigen</button>
+          <div class="details hidden" aria-hidden="true">
+            <p>Die Berechnungen berücksichtigen keine Vorurteile und basieren auf geprüften Algorithmen.</p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fas fa-info-circle icon"></i> <!-- Icon für Offene Informationen -->
+          <h3>Offene Informationen</h3>
+          <p>Alle Fragen, Antworten und Ergebnisse sind vollständig einsehbar.</p>
+          <button class="toggle-button" aria-expanded="false">Mehr anzeigen</button>
+          <div class="details hidden" aria-hidden="true">
+            <p>Zusätzliche Transparenz durch Open-Source-Integration und externe Audits.</p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fas fa-balance-scale icon"></i> <!-- Icon für Neutralität -->
+          <h3>Neutralität</h3>
+          <p>Parteien werden ausschließlich auf Grundlage ihrer Positionen bewertet.</p>
+          <button class="toggle-button" aria-expanded="false">Mehr anzeigen</button>
+          <div class="details hidden" aria-hidden="true">
+            <p>Die Analyse berücksichtigt nur objektive Daten.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz-Bereich -->
+  <main class="container">
+    <div id="question-container" class="hidden">
+      <h2 id="question-headline">Frage 1</h2>
+      <p id="question-text">Soll der Mindestlohn erhöht werden?</p>
+      <p id="question-explanation"></p>
+      <div id="options">
+        <button>Ja</button>
+        <button>Nein</button>
+        <button>Neutral</button>
+      </div>
+      <div id="progress-bar">
+        <div id="progress"></div>
+      </div>
+      <div id="navigation-buttons">
+        <button id="prev-btn" class="hidden">Zurück</button>
+        <button id="next-btn">Weiter</button>
+      </div>
+    </div>
+
+    <section id="result-section" class="hidden">
+      <div id="results"></div>
+      <button id="restart-btn">Neustart</button>
+    </section>
+    <section id="result-section" class="hidden">
+      <div id="results"></div>
+      <div id="detailed-results"></div> <!-- Neuer Container für detaillierte Ergebnisse -->
+      <button id="restart-btn">Neustart</button>
+    </section>
+
+    <!-- Modal für Themengewichtung -->
+    <div id="weight-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" id="close-modal-btn">&times;</span>
+        <h2>Themenprioritäten anpassen</h2>
+        <div class="slider-group">
+          <label for="climateSlider">Klima und Energie (0.5 bis 3):</label>
+          <input type="range" id="climateSlider" min="0.5" max="3" step="0.5" value="1" oninput="updateCategoryWeight('Klima und Energie', this.value)" />
+          <span id="climateSliderValue">1</span>
+        </div>
+        <div class="slider-group">
+          <label for="migrationSlider">Migration (0.5 bis 3):</label>
+          <input type="range" id="migrationSlider" min="0.5" max="3" step="0.5" value="1" oninput="updateCategoryWeight('Migration', this.value)" />
+          <span id="migrationSliderValue">1</span>
+        </div>
+        <div class="slider-group">
+          <label for="bildungSlider">Bildung (0.5 bis 3):</label>
+          <input type="range" id="bildungSlider" min="0.5" max="3" step="0.5" value="1" oninput="updateCategoryWeight('Bildung', this.value)" />
+          <span id="bildungSliderValue">1</span>
+        </div>
+        <button id="apply-weights-btn" style="margin-top:20px;">Änderungen anwenden</button>
+      </div>
+    </div>
+  </main>
+  <section class="explanation-section container">
+    <h2>Themenprioritäten anpassen</h2>
+    <p>
+      Die Funktion <strong>Themenprioritäten anpassen</strong> ermöglicht es Ihnen, Ihre persönlichen politischen Schwerpunkte zu setzen und die Gewichtung verschiedener Themenbereiche in Ihrem individuellen Parteienvergleich zu beeinflussen. Dieses Tool wurde entwickelt, um Ihre politischen Präferenzen noch genauer abzubilden und Ihnen eine fundierte Entscheidungshilfe bei der Wahl zu bieten.
+    </p>
+    <h3>Wie funktioniert die Themengewichtung?</h3>
+    <ol>
+      <li><strong>Auswahl der Themenbereiche:</strong> Sie können aus einer Liste von politischen Themenbereichen (z. B. Klima und Energie, Migration, Bildung) auswählen, die Ihnen besonders wichtig sind.</li>
+      <li><strong>Anpassung der Gewichtung:</strong> Mithilfe von Schiebereglern können Sie die Gewichtung der einzelnen Themenbereiche anpassen. Die Gewichtung kann zwischen <strong>0,5</strong> (geringe Priorität) und <strong>3</strong> (hohe Priorität) liegen.</li>
+      <li><strong>Anwendung der Änderungen:</strong> Nachdem Sie die Gewichtung angepasst haben, klicken Sie auf <strong>Änderungen anwenden</strong>. Die neuen Gewichtungen werden sofort in die Berechnung Ihres Parteienvergleichs einbezogen.</li>
+    </ol>
+    <h3>Warum ist diese Funktion wichtig?</h3>
+    <ul>
+      <li><strong>Individuelle Anpassung:</strong> Nicht alle Themen sind für jeden Wähler gleich wichtig. Mit dieser Funktion können Sie sicherstellen, dass Ihre persönlichen Prioritäten in der Auswertung berücksichtigt werden.</li>
+      <li><strong>Transparenz:</strong> Sie sehen genau, wie Ihre Gewichtungen die Ergebnisse beeinflussen.</li>
+      <li><strong>Neutralität:</strong> Die Gewichtung basiert ausschließlich auf Ihren Eingaben und wird ohne externe Einflussnahme berechnet.</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content container">
+      <div class="footer-section">
+        <h2>Über Wahl-E</h2>
+        <p>Wahl-E ist ein Tool für Transparenz und Neutralität.</p>
+      </div>
+      <div class="footer-section">
+        <h2>Kontakt</h2>
+        <p>Email: <a href="mailto:kaihoelters@icloud.com">kaihoelters@icloud.com</a></p>
+      </div>
+      <div class="footer-section">
+        <h2>GitHub-Projekt</h2>
+        <p>
+          Schaue dir den Quellcode auf <a href="https://github.com/nakzyhyh" target="_blank">GitHub</a> an.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Kai Hölters. Alle Rechte vorbehalten. | <a href="/datenschutz.html">Datenschutzerklärung</a> | <a href="/impressum.html">Impressum</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener("click", function () {
+          const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
+          toggleBtn.setAttribute("aria-expanded", isExpanded ? "false" : "true");
+          navLinks.classList.toggle("show-links");
+        });
+      }
+
+      const toggleButtons = document.querySelectorAll(".toggle-button");
+      toggleButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const details = button.nextElementSibling;
+          const isHidden = details.style.display === "none" || !details.style.display;
+          details.style.display = isHidden ? "block" : "none";
+          button.textContent = isHidden ? "Weniger anzeigen" : "Mehr anzeigen";
+
+          const expanded = button.getAttribute("aria-expanded") === "true";
+          button.setAttribute("aria-expanded", expanded ? "false" : "true");
+          details.setAttribute("aria-hidden", expanded ? "true" : "false");
+        });
+      });
+
+      const startQuizButton = document.getElementById("start-quiz-btn");
+      const questionContainer = document.getElementById("question-container");
+      startQuizButton?.addEventListener("click", () => {
+        questionContainer.classList.remove("hidden");
+        questionContainer.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+  <script src="final_script.js"></script>
+</body>
+</html>
