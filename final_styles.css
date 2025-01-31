@@ -1,0 +1,821 @@
+/******************************************************
+ * 1) GLOBAL RESET & BODY
+ ******************************************************/
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ body {
+   font-family: "Roboto", sans-serif;
+   background-color: #f4f4f4;
+   color: #1d2d50; /* Dein Standard Dunkelblau */
+   text-align: center;
+   line-height: 1.5;
+ }
+ 
+ /******************************************************
+  * 2) NAVIGATION (STICKY HEADER)
+  ******************************************************/
+ .main-nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 20px;
+   background-color: #00274d; /* Dunkelblau */
+   color: white;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ 
+ /* Logo */
+ .main-nav .logo {
+   flex-shrink: 0;
+   font-size: 1.8em;
+   font-weight: bold;
+   color: #ffcc00; /* Gold */
+   padding-left: 15px;
+ }
+ 
+ /* Navigations-Links */
+ .main-nav .nav-links {
+   display: flex;
+   gap: 15px;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ .main-nav .nav-links a {
+   color: #ffcc00;
+   text-decoration: none;
+   font-size: 1em;
+   transition: color 0.3s ease;
+ }
+ 
+ .main-nav .nav-links a:hover {
+   color: #e6b800;
+ }
+ 
+ /* Toggle (Mobile) */
+ .main-nav .nav-toggle {
+   display: none;
+   background: none;
+   border: none;
+   color: #ffcc00;
+   font-size: 1.5rem;
+   cursor: pointer;
+ }
+ 
+ @media (max-width: 768px) {
+   .main-nav .nav-links {
+     display: none;
+     flex-direction: column;
+     background-color: #00274d;
+     position: absolute;
+     top: 50px;
+     right: 10px;
+     width: 200px;
+     padding: 10px;
+     border-radius: 5px;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+   }
+   .main-nav .nav-links.show-links {
+     display: flex;
+   }
+   .main-nav .nav-toggle {
+     display: block;
+   }
+ }
+ 
+ /******************************************************
+  * 3) HEADER MIT HINTERGRUNDBILD (HERO)
+  ******************************************************/
+ .header-with-background {
+   position: relative;
+   height: 40vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin-top: 0;
+   padding-top: 50px; /* Raum für sticky nav */
+   padding-bottom: 10px;
+   background-size: cover;
+   background-position: center;
+ }
+ 
+ /* Overlay */
+ .header-with-background::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.4);
+ }
+ 
+ /* Hero-Logo */
+ .header-with-background .logo {
+   position: absolute;
+   top: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 3em;
+   color: #ffcc00; /* Gold */
+   text-transform: uppercase;
+   font-weight: bold;
+   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+ }
+ 
+ /* Slogan */
+ .header-with-background .slogan {
+   font-size: 1.5em;
+   color: #ffcc00;
+   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+   font-weight: bold;
+   margin-top: 10px;
+   position: relative;
+ }
+ 
+ /******************************************************
+  * 4) FEATURE-BAR (KARTENSTIL)
+  ******************************************************/
+ .feature-bar {
+   display: flex;
+   flex-wrap: wrap; /* Umbruch auf schmalen Bildschirmen */
+   justify-content: center;
+   gap: 20px;
+   background-color: #00274d; /* Dunkelblau */
+   padding: 20px;
+   text-align: center;
+   border-top: 3px solid #ffcc00;
+   border-bottom: 3px solid #ffcc00;
+   font-size: 1.1em; /* kann aus der alten Version übernommen werden */
+   color: #fff;
+ }
+ 
+ .feature-item {
+   background: #00355f; /* leicht helleres Dunkelblau als Kontrast */
+   border-radius: 8px;
+   padding: 15px 20px;
+   width: 200px;
+   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+   transition: transform 0.3s, background 0.3s;
+ }
+ 
+ .feature-item:hover {
+   transform: translateY(-3px);
+   background: #003e6f; /* etwas helleres Blau bei Hover */
+ }
+ 
+ .feature-item i {
+   font-size: 2em;
+   color: #ffcc00;
+   margin-bottom: 10px;
+ }
+ 
+ .feature-item span {
+   color: #ffffff;
+   font-weight: bold;
+   font-size: 1.1em;
+ }
+ 
+ @media (max-width: 600px) {
+   .feature-item {
+     width: 100%;
+     max-width: 300px;
+   }
+ }
+ 
+ /******************************************************
+  * 5) COUNTDOWN + GENERATOR-BEREICH
+  ******************************************************/
+ /* Hauptcontainer */
+ .countdown-generator-section {
+   max-width: 1200px;
+   margin: 40px auto;
+   padding: 50px 20px;
+   text-align: center;
+   color: #fff; 
+ }
+ 
+ /* Countdown-Block */
+ .countdown-area {
+   background: rgba(0, 0, 0, 0.5);
+   padding: 20px;
+   border-radius: 10px;
+   margin-bottom: 20px;
+ }
+ 
+ .countdown-area h2 {
+   font-size: 2.2em;
+   font-weight: bold;
+   margin-bottom: 20px;
+   color: #fff;
+ }
+ 
+ .countdown-area p {
+   font-size: 1em;
+   line-height: 1.6;
+   color: #fff;
+   margin-bottom: 20px;
+ }
+ 
+ #countdown {
+   font-size: 1.8em;
+   margin-top: 20px;
+   background: rgba(255, 204, 0, 0.15);
+   border-radius: 8px;
+   display: inline-block;
+   padding: 10px 15px;
+   font-weight: bold;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   color: #1d7874;
+ }
+ 
+ #countdown span {
+   padding: 5px 10px;
+   margin: 0 5px;
+   background: rgba(255, 204, 0, 0.2);
+   border-radius: 5px;
+   font-weight: bold;
+ }
+ 
+ /* Alternative Countdown-Darstellung */
+ .countdown-timer {
+   display: inline-flex; /* flex für horizontale Anordnung */
+   gap: 10px;
+   background: #444;
+   padding: 10px 20px;
+   border-radius: 8px;
+   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+   color: #fff;
+ }
+ 
+ .countdown-timer span {
+   background: #ffcc00;
+   color: #00274d;
+   font-size: 1.4em;
+   font-weight: bold;
+   padding: 5px 8px;
+   border-radius: 4px;
+ }
+ 
+ /* Generator-Area (helle Variante) */
+ .generator-area {
+   background: #fafafa; /* Hell statt dunkles #1d7874 */
+   color: #00274d;
+   border-radius: 10px;
+   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+   padding: 30px;
+   text-align: center;
+   margin-top: 30px;
+ }
+ 
+ .generator-area h1 {
+   font-size: 1.8em;
+   font-weight: bold;
+   margin-bottom: 15px;
+   color: #1d7874; /* z.B. dein Markengrün */
+ }
+ 
+ .generator-area p {
+   font-size: 1.1em;
+   line-height: 1.6;
+   color: #333; /* gut lesbar */
+   margin-bottom: 20px;
+ }
+ 
+ .generator-area button {
+   background: #1d7874;
+   color: #fff;
+   border: none;
+   border-radius: 30px;
+   padding: 15px 30px;
+   font-size: 1.2em;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+ }
+ 
+ .generator-area button:hover {
+   background: linear-gradient(135deg, #1d2d50, #d4a900);
+   transform: scale(1.1);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+ 
+ /******************************************************
+  * 6) QUIZ-BEREICH
+  ******************************************************/
+ main.container {
+   padding: 40px 0;
+ }
+ 
+ /* Fragen-Container */
+ #question-container {
+   background: #f8f9fa;
+   border: 1px solid #ddd;
+   border-radius: 10px;
+   padding: 30px;
+   margin: 20px auto;
+   max-width: 800px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   color: #00274d;
+ }
+ 
+ #question-headline {
+   font-size: 1.8em;
+   font-weight: bold;
+   margin-bottom: 10px;
+ }
+ 
+ #question-text,
+ #question-explanation {
+   color: #333;
+   font-size: 1.1em;
+   margin: 10px auto;
+   text-align: center;
+   max-width: 600px;
+ }
+ 
+ /* Optionen */
+ #options {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   margin: 20px 0;
+ }
+ 
+ #options button {
+   flex: 0 1 auto;
+   max-width: 180px;
+   padding: 10px;
+   font-size: 14px;
+   border: none;
+   border-radius: 10px;
+   background-color: #1d7874;
+   color: #fff;
+   cursor: pointer;
+   transition: background-color 0.3s;
+ }
+ 
+ #options button:hover {
+   background-color: #35495e;
+ }
+ 
+ /* Navigation (Zurück/Weiter) */
+ #navigation-buttons {
+   display: flex;
+   gap: 10px;
+   justify-content: center;
+   margin-top: 20px;
+ }
+ 
+ #navigation-buttons button {
+   background-color: #1d7874 !important;
+   color: #fff !important;
+   font-weight: bold;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+ 
+ #navigation-buttons button:hover {
+   background-color: #35495e !important;
+ }
+ 
+ /* Fortschrittsbalken */
+ #progress-bar {
+   width: 80%;
+   margin: 10px auto;
+   background-color: #f4f4f4;
+   border-radius: 5px;
+   overflow: hidden;
+ }
+ 
+ #progress {
+   width: 0;
+   height: 10px;
+   background-color: #1d7874;
+   transition: width 0.5s ease-in-out;
+ }
+ 
+ /******************************************************
+  * 7) ERGEBNIS-BEREICH
+  ******************************************************/
+ .result-section {
+   padding: 20px;
+   text-align: center;
+ }
+ 
+ #results {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   max-width: 900px;
+   margin: 20px auto;
+ }
+ 
+ /* Ergebnis-Karten */
+ .result-card {
+   background: #fff;
+   border-radius: 12px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+   margin: 20px auto;
+   max-width: 600px;
+   transition: transform 0.3s ease;
+   text-align: center;
+ }
+ 
+ .result-card:hover {
+   transform: translateY(-5px);
+ }
+ 
+ /* Fortschrittsbalken in Ergebnis */
+ .match-bar {
+   width: 100%;
+   height: 20px;
+   background: #e0e0e0;
+   border-radius: 10px;
+   overflow: hidden;
+   margin: 15px 0;
+ }
+ 
+ .match-progress {
+   height: 100%;
+   transition: width 0.5s ease-in-out;
+ }
+ 
+ /* Parteiname + Farbbalken */
+ .party-name.cdu {
+   color: #fff !important;
+   background-color: #1d7874;
+   padding: 5px;
+   border-radius: 5px;
+ }
+ .party-name.afd {
+   color: #fff !important;
+   background-color: #005bbb;
+   padding: 5px;
+   border-radius: 5px;
+ }
+ .party-name.spd {
+   color: #fff !important;
+   background-color: #bb0000;
+   padding: 5px;
+   border-radius: 5px;
+ }
+ .party-name.gruene {
+   color: #fff !important;
+   background-color: #008000;
+   padding: 5px;
+   border-radius: 5px;
+ }
+ .party-name.fdp {
+   color: #000 !important;
+   background-color: #ffd700;
+   padding: 5px;
+   border-radius: 5px;
+ }
+ .party-name.linke {
+   color: #fff !important;
+   background-color: #800080;
+   padding: 5px;
+   border-radius: 5px;
+ }
+ 
+ .match-progress.cdu {
+   background-color: #1d7874;
+ }
+ .match-progress.afd {
+   background-color: #005bbb;
+ }
+ .match-progress.spd {
+   background-color: #bb0000;
+ }
+ .match-progress.gruene {
+   background-color: #008000;
+ }
+ .match-progress.fdp {
+   background-color: #ffd700;
+ }
+ .match-progress.linke {
+   background-color: #800080;
+ }
+ 
+ /* Accordion (Kernaussagen) */
+ .accordion {
+   background: #f8f9fa;
+   color: #00274d;
+   cursor: pointer;
+   padding: 15px;
+   border: none;
+   border-radius: 8px;
+   text-align: left;
+   outline: none;
+   font-size: 1.1em;
+   transition: background 0.3s;
+ }
+ 
+ .accordion:hover {
+   background: #e0e0e0;
+ }
+ 
+ .details-content {
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.3s ease-out;
+   padding: 0 15px;
+ }
+ 
+ .core-message {
+   font-size: 0.95em;
+   line-height: 1.6;
+   color: #424242;
+   margin: 15px 0;
+ }
+ 
+ .transparency-info {
+   background: #f8f9fa;
+   padding: 15px;
+   border-radius: 8px;
+   margin-top: 10px;
+   font-size: 0.9em;
+ }
+ 
+ /******************************************************
+  * 8) TRANSPARENZ-SEKTION
+  ******************************************************/
+ .transparency-section {
+   background: #f8f9fa;
+   padding: 30px;
+   border-radius: 15px;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+   max-width: 900px;
+   margin: 40px auto;
+   text-align: center;
+ }
+ 
+ .transparency-section h2 {
+   font-size: 2rem;
+   font-weight: bold;
+   color: #35495e;
+   margin-bottom: 15px;
+ }
+ 
+ .transparency-section p {
+   font-size: 1.1rem;
+   color: #1d2d50;
+   line-height: 1.5;
+   margin-bottom: 20px;
+ }
+ 
+ .transparency-section ul {
+   list-style: none;
+   padding: 0;
+ }
+ .transparency-section li {
+   font-size: 1rem;
+   margin-bottom: 10px;
+ }
+ .transparency-section li::before {
+   content: "✔️";
+   color: #008000;
+   margin-right: 8px;
+   font-weight: bold;
+ }
+ 
+ /******************************************************
+  * 9) FOOTER
+  ******************************************************/
+ footer {
+   background-color: #35495e;
+   color: #fff !important;
+   padding: 20px 10px;
+   font-size: 0.9em;
+   text-align: center;
+   margin-top: 30px;
+ }
+ 
+ footer .footer-content {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: space-around;
+ }
+ 
+ footer h2 {
+   font-size: 1.5em;
+   margin-bottom: 10px;
+   color: #1d7874;
+ }
+ 
+ footer a {
+   color: #1d7874;
+   text-decoration: none;
+   transition: color 0.3s ease;
+ }
+ 
+ footer a:hover {
+   color: #1d2d50;
+ }
+ 
+ .footer-bottom {
+   margin-top: 20px;
+ }
+ 
+ /******************************************************
+  * 10) HILFSKLASSEN, ANIMATIONEN, ETC.
+  ******************************************************/
+ /* Verstecken */
+ .hidden {
+   display: none !important;
+ }
+ 
+ /* Standard-Button */
+ button {
+   background-color: #1d7874; /* Behoben: Gleiches BG + Schrift-Farbe war unlesbar */
+   color: #fff;
+   padding: 12px 40px;
+   font-size: 1em;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease, transform 0.2s;
+ }
+ button:hover {
+   background-color: #1d2d50;
+   transform: scale(1.05);
+ }
+ 
+ /* Start-Generator Hover-Animation */
+ @keyframes pulse {
+   0% {
+     transform: scale(1);
+   }
+   50% {
+     transform: scale(1.1);
+   }
+   100% {
+     transform: scale(1);
+   }
+ }
+ .start-generator button:hover {
+   animation: pulse 1s infinite;
+   transform-origin: center;
+ }
+ 
+ /******************************************************
+  * SONSTIGE ERGÄNZUNGEN
+  ******************************************************/
+ /* Rund um den Bereich: "Neuwahlen 2025 ..." 
+    (falls du .hero dafür nutzt) */
+ .hero h1 {
+   font-size: 2.4em;
+   font-weight: bold;
+   margin-bottom: 0.5em;
+   color: #ffcc00; /* Gold als Eyecatcher */
+   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+ }
+ 
+ .hero p {
+   font-size: 1.1em;
+   color: #fff;
+   max-width: 700px;
+   margin: 0 auto 1em;
+ }
+ 
+ /* Dezenten Hintergrund + Schatten für weitere Sektionen */
+ .section-panel {
+   background: #fff;
+   border-radius: 10px;
+   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+   margin: 30px auto;
+   padding: 30px;
+   max-width: 900px;
+   text-align: center;
+ }
+ button.cta {
+  background: #ffcc00;
+  color: #00274d;
+  font-size: 1.1em;
+  padding: 15px 30px;
+  border-radius: 6px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+button.cta:hover {
+  background: linear-gradient(90deg, #ffe066, #ffcc00);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transform: translateY(-1px);
+}
+.feature-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  text-align: center;
+  padding: 20px;
+  width: 220px;
+  transition: transform 0.3s;
+}
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+.feature-item i {
+  font-size: 2em;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+.feature-item h3 {
+  font-size: 1.1em;
+  color: #00274d;
+  margin-bottom: 5px;
+}
+.feature-item p {
+  font-size: 0.95em;
+  color: #555;
+}
+/* --- 1) Container & Titel --- */
+.features {
+  margin: 40px auto;
+  text-align: center;
+}
+.features-title {
+  font-size: 2rem;
+  color: #00274d;
+  margin-bottom: 30px;
+}
+
+/* --- 2) Grid-Layout der Karten --- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- 3) Einzelne Karten (feature-card) --- */
+.feature-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 250px; /* Optional, um die Breite zu beschränken */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+/* --- 4) Icon-Bereich --- */
+.icon-wrapper {
+  background: #ffcc00; /* Gold */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-wrapper i {
+  color: #00274d;
+  font-size: 1.5rem;
+}
+
+/* --- 5) Überschrift und Text --- */
+.feature-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #00274d;
+  font-weight: 700;
+}
+.feature-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #555;
+}
