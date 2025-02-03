@@ -41,7 +41,7 @@ Wahl-E bietet eine **plattformunabhängige Web-App**, mit der politische Positio
 - **React.js (geplant)**: Zukunftsorientierte Weiterentwicklung für verbesserte Performance.
 
 ### ☁️ **Hosting & CI/CD**
-- **Gehostet auf GitHub Pages** mit **automatisierten CI/CD-Pipelines** für kontinuierliche Updates.
+- **Gehostet auf Netlify** unter: [https://heartfelt-naiad-8e7fff.netlify.app/](https://heartfelt-naiad-8e7fff.netlify.app/)
 - **Optimierte Ladezeiten** durch **Code-Splitting und Minifizierung**.
 
 ### 📊 **Datenanalyse & Algorithmen**
@@ -81,7 +81,7 @@ Wahl-E bietet eine **plattformunabhängige Web-App**, mit der politische Positio
 ---
 
 ## 📢 Live-Demo
-🎮 **Testen Sie Wahl-E hier:** [Wahl-E ausprobieren](#)  
+🎮 **Testen Sie Wahl-E hier:** [https://heartfelt-naiad-8e7fff.netlify.app/](https://heartfelt-naiad-8e7fff.netlify.app/)  
 
 ---
 
@@ -96,5 +96,7 @@ Ich bin ein **angehender Informatiker für Systemintegration** und habe Wahl-E e
 📧 **E-Mail:** [Ihre E-Mail-Adresse]  
 🔗 **LinkedIn:** [Ihr LinkedIn-Profil]  
 🐙 **GitHub:** [nakzyhyh](https://github.com/nakzyhyh)  
+
+---
 
 ---
