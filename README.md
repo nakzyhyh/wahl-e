@@ -1,147 +1,100 @@
-# Wahl-E
+# Wahl-E - Der transparente Wahlkompass 🚀
 
-Wahl-E ist ein interaktiver Wahlkompass, der es Nutzern ermöglicht, ihre politischen Übereinstimmungen mit verschiedenen Parteien zu berechnen. Im Gegensatz zu anderen Tools, wie dem Wahl-O-Mat, legt Wahl-E besonderen Wert auf vollständige Transparenz und Nachvollziehbarkeit.
-
----
-
-## Was ist Wahl-E?
-
-Wahl-E bietet eine Plattform, um politische Positionen und Ansichten mit den Programmen der Parteien zu vergleichen. Dabei sind alle Fragen, Antworten und Berechnungen offen einsehbar, um eine transparente und nachvollziehbare Entscheidungsgrundlage zu schaffen. Ziel ist es, politisches Wissen zu vermitteln und eine fundierte Orientierungshilfe für die eigenen politischen Überzeugungen zu bieten.
+Wahl-E ist eine interaktive Wahlhilfe, die es Nutzern ermöglicht, ihre politischen Übereinstimmungen mit verschiedenen Parteien zu berechnen. Im Gegensatz zu traditionellen Tools wie dem Wahl-O-Mat legt Wahl-E besonderen Wert auf **vollständige Transparenz, Open-Source-Zugänglichkeit und nachvollziehbare Berechnungsmodelle**.
 
 ---
 
-## Features
+## 🌍 Was ist Wahl-E?
 
-### ⚡ Transparenz
-- **Öffentliche Einsehbarkeit:**
-  Alle Fragen, Antworten der Parteien und die Berechnungslogik sind öffentlich einsehbar.
-- **Nachvollziehbare Berechnung:**
-  Wahl-E zeigt genau, welche Daten verwendet werden und wie die Übereinstimmung Schritt für Schritt berechnet wird. Die Algorithmen basieren auf offenen mathematischen Modellen, die keine Black-Box-Prozesse enthalten.
-
-### 🔍 Informative Erklärungen
-- **Hintergrundinformationen:**
-  Jede Frage enthält eine detaillierte und leicht verständliche Erläuterung, die von validierten Quellen gestützt ist.
-- **Kontextbezogene Erklärungen:**
-  Politische Themen werden im internationalen und nationalen Kontext beschrieben, um einen breiteren Blickwinkel zu bieten.
-
-### 📊 Flexibler Fragenkatalog
-- **Breite Themenabdeckung:**
-  Bis zu 40 Themenbereiche, darunter Wirtschaft, Klima, Digitalisierung, Migration, Bildung und Gesundheit.
-- **Modularer Aufbau:**
-  Nutzer können spezifische Themenfelder auswählen, die für sie besonders relevant sind, um personalisierte Ergebnisse zu erhalten.
-
-### 🔓 Unabhängigkeit
-- **Frei und neutral:**
-  Wahl-E ist ein freies und unabhängiges Projekt, ohne Verbindung zu politischen Parteien oder Institutionen.
-- **Open-Source-Ansatz:**
-  Der Quellcode und die Datengrundlagen sind auf GitHub einsehbar, um maximale Transparenz zu gewährleisten.
-
-### 🌐 Interaktiv und einfach zu nutzen
-- **Browserbasiert:**
-  Vollständig browserbasiert, erfordert keine Installation oder Registrierung.
-- **Responsive Design:**
-  Optimiert für alle Endgeräte (Desktop, Tablet, Smartphone) mit barrierefreiem Zugang.
+Wahl-E bietet eine **plattformunabhängige Web-App**, mit der politische Positionen und Standpunkte mit den Programmen der Parteien verglichen werden können. Alle Fragen, Antworten und Berechnungen sind **offen einsehbar**, um eine transparente und fundierte Entscheidungsgrundlage zu schaffen. Ziel ist es, **politisches Wissen** zu vermitteln und eine **unabhängige, datenbasierte Orientierungshilfe** zu bieten.
 
 ---
 
-## Ziel von Wahl-E
+## 🔥 Features & Vorteile
 
-Wahl-E möchte die politischen Entscheidungsprozesse für Wähler transparenter gestalten. Viele Wahltools sind hinsichtlich ihrer Datenquellen und Gewichtungslogik undurchsichtig. Wahl-E setzt auf eine offene Struktur, bei der Nutzer jeden Schritt nachvollziehen können. Das Ziel ist, politisches Wissen zu fördern und informierte Wahlentscheidungen zu unterstützen.
+### ⚡ **Transparenz & Open Source**
+- **Öffentlich einsehbar**: Alle Fragen, Antworten der Parteien und die Berechnungslogik sind **öffentlich zugänglich**.
+- **Keine Black-Box-Algorithmen**: Wahl-E nutzt **offene mathematische Modelle**, die die Berechnung der politischen Übereinstimmung **vollständig nachvollziehbar** machen.
 
----
+### 🔍 **Informative Erklärungen**
+- **Hintergrundinfos zu jeder Frage**: Politische Fragen werden mit **wissenschaftlich fundierten** Erklärungen aus validierten Quellen ergänzt.
+- **Kontextbezogene Darstellungen**: Politische Themen werden sowohl aus nationaler als auch internationaler Perspektive betrachtet.
 
-## Technologie-Stack
+### 📊 **Flexibler Fragenkatalog**
+- **Breite Themenabdeckung**: Bis zu **40 Themenbereiche**, darunter **Wirtschaft, Klima, Digitalisierung, Migration, Bildung und Gesundheit**.
+- **Modularer Aufbau**: Nutzer können **individuelle Themenbereiche** auswählen, um ein **personalisiertes Ergebnis** zu erhalten.
 
-### Frontend
-- **HTML, CSS und JavaScript:**
-  Dynamische Logik und Interaktivität wurden vollständig in JavaScript implementiert. Modularer Aufbau erleichtert zukünftige Erweiterungen.
+### 🔓 **Unabhängigkeit & Sicherheit**
+- **Neutral & unabhängig**: Wahl-E ist ein **freies und unabhängiges** Open-Source-Projekt, ohne Verbindung zu Parteien oder Institutionen.
+- **Datenschutzfreundlich**: Keine Speicherung von persönlichen Daten – alle Berechnungen laufen **lokal im Browser**.
 
-### Hosting
-- Gehostet auf **GitHub Pages**, mit automatisierten CI/CD-Pipelines zur kontinuierlichen Aktualisierung.
-
-### Responsive Design
-- **Mobile-First-Ansatz:**
-  Optimierung für alle Endgeräte mit besonderem Fokus auf Performance und Benutzerfreundlichkeit.
-
----
-
-## Bereich Data, Analytics und IoT
-
-### 📊 Datenanalyse und -aufbereitung
-- **Datenquellen:**
-  Politische Programme und Positionen werden automatisiert erfasst und strukturiert aufbereitet.
-- **Berechnungslogik:**
-  Die Übereinstimmungsanalyse basiert auf gewichteten Matching-Algorithmen, die Nutzereingaben mit Parteiantworten abgleichen.
-- **Datenvalidierung:**
-  Alle Daten werden vor der Verwendung auf Korrektheit und Aktualität geprüft.
-
-### 🌐 Datenvisualisierung
-- **Interaktive Grafiken:**
-  Ergebnisse werden visuell aufbereitet, z. B. durch Balkendiagramme oder Heatmaps, um komplexe Zusammenhänge einfach darzustellen.
-- **Filteroptionen:**
-  Nutzer können die Ergebnisse nach Themengebieten oder Gewichtungen sortieren und anpassen.
-
-### 🛠️ IoT-Integration
-- **Smart Devices:**
-  Geplant ist die Integration von Smart-Home-Geräten, die Live-Abstimmungen oder Benachrichtigungen über politische Ereignisse ermöglichen.
-- **Real-Time Analytics:**
-  Einsatz von Edge-Computing, um Umfrageergebnisse in Echtzeit zu analysieren und darzustellen.
+### 🌐 **Interaktiv & Benutzerfreundlich**
+- **Vollständig browserbasiert**: Erfordert **keine Installation oder Registrierung**.
+- **Optimiertes UI/UX**: Responsive Design für **Desktop, Tablet & Smartphone**.
 
 ---
 
-## Live-Demo
+## 🛠 Technologie-Stack
 
-Testen Sie Wahl-E hier: [Wahl-E ausprobieren](#)
+### 🎨 **Frontend**
+- **HTML, CSS & JavaScript**: Dynamische Interaktivität wird durch ein **modulares Vanilla-JavaScript-Framework** realisiert.
+- **React.js (geplant)**: Zukunftsorientierte Weiterentwicklung für verbesserte Performance.
 
----
+### ☁️ **Hosting & CI/CD**
+- **Gehostet auf GitHub Pages** mit **automatisierten CI/CD-Pipelines** für kontinuierliche Updates.
+- **Optimierte Ladezeiten** durch **Code-Splitting und Minifizierung**.
 
-## Wie funktioniert Wahl-E?
+### 📊 **Datenanalyse & Algorithmen**
+- **Automatische Erfassung & Analyse von Parteiprogrammen** zur dynamischen Gewichtung der Antworten.
+- **Machine-Learning-Modelle (geplant)** zur Verbesserung der Nutzerempfehlungen.
 
-1. **Beantworten Sie Fragen:**
-   - Wählen Sie für jede Frage eine der Antwortoptionen: *Ja*, *Nein* oder *Neutral*.
-
-2. **Erhalten Sie ein Ergebnis:**
-   - Eine übersichtliche Tabelle zeigt Ihre Übereinstimmung mit den verschiedenen Parteien.
-
-3. **Lernen Sie dazu:**
-   - Nutzen Sie die Erklärungen zu den Fragen, um mehr über politische Themen und Positionen zu erfahren.
-
----
-
-## Beispielhafte Fragen im Katalog
-
-- **Frage:** Soll der Mindestlohn auf 15 Euro erhöht werden?
-  - **Erklärung:** Der Mindestlohn ist das gesetzlich festgelegte Mindesteinkommen für Arbeitnehmer. Aktuell beträgt er 12 Euro pro Stunde. Eine Erhöhung auf 15 Euro könnte die Kaufkraft stärken und Armut reduzieren, aber Arbeitgeber warnen vor möglichen Arbeitsplatzverlusten.
-
-- **Frage:** Soll die Schuldenbremse reformiert werden, um mehr staatliche Investitionen zu ermöglichen?
-  - **Erklärung:** Die Schuldenbremse begrenzt die Neuverschuldung des Bundes und der Länder. Kritiker meinen, dass sie Investitionen in Infrastruktur und Bildung behindert, während Befürworter sie als Schutz vor übermäßigen Schulden sehen.
+### 📡 **IoT & Live-Analytics (zukünftige Features)**
+- **Integration mit Smart Devices** zur Echtzeit-Abstimmung und Benachrichtigung über politische Ereignisse.
+- **Live-Analyse von Umfragen** mittels **Edge-Computing** für aktuelle politische Trends.
 
 ---
 
-## Zukünftige Erweiterungen
+## 🎯 So funktioniert Wahl-E
 
-- **Fragenkatalog erweitern:**
-  - Integration von bis zu 40 Fragen, um mehr politische Themen abzudecken.
-
-- **Mehrsprachigkeit:**
-  - Bereitstellung in mehreren Sprachen, um eine breitere Zielgruppe zu erreichen.
-
-- **Erweiterte Ergebnisse:**
-  - Visualisierungen und Filteroptionen für eine bessere Ergebnisdarstellung.
+1️⃣ **Beantworten Sie Fragen**: Wählen Sie eine Antwortoption für jede Frage (**Ja, Nein, Neutral**).  
+2️⃣ **Erhalten Sie Ihr Ergebnis**: Eine **tabellarische Übersicht** zeigt die **politische Übereinstimmung mit den Parteien**.  
+3️⃣ **Lernen Sie dazu**: Nutzen Sie die **detaillierten Erklärungen**, um mehr über politische Themen und Positionen zu erfahren.
 
 ---
 
-## Über mich
+## 📝 Beispielhafte Fragen & Erklärungen
 
-Ich bin angehender Informatiker für Systemintegration und habe Wahl-E entwickelt, um meine Fähigkeiten in Webdesign, Programmierung und Benutzerinteraktion zu demonstrieren. Dieses Projekt verbindet Technologie mit politischer Bildung und zeigt, wie digitale Tools Transparenz fördern können.
+🔹 **Frage:** Soll der Mindestlohn auf 15 Euro erhöht werden?  
+💡 **Erklärung:** Der gesetzliche Mindestlohn beträgt derzeit 12 Euro. Eine Anhebung könnte die Kaufkraft stärken, aber mögliche Arbeitsplatzverluste sind umstritten.  
 
-Besuchen Sie mein Portfolio, um weitere Projekte anzusehen: [Mein Portfolio](#)
+🔹 **Frage:** Soll die Schuldenbremse reformiert werden, um mehr staatliche Investitionen zu ermöglichen?  
+💡 **Erklärung:** Die Schuldenbremse begrenzt die Neuverschuldung des Staates. Gegner argumentieren, sie verhindere notwendige Investitionen, während Befürworter sie als Schutz vor Überschuldung sehen.  
 
 ---
 
-## Kontakt
+## 🚀 Zukünftige Erweiterungen
 
-Haben Sie Fragen oder Feedback? Kontaktieren Sie mich gerne:
-- **E-Mail:** [Ihre E-Mail-Adresse]
-- **LinkedIn:** [Ihr LinkedIn-Profil]
+🔹 **Erweiterung des Fragenkatalogs**: Bis zu **40 politische Fragen** zur besseren Abdeckung aktueller Themen.  
+🔹 **Mehrsprachigkeit**: Unterstützung für **Englisch, Französisch und weitere Sprachen**.  
+🔹 **Erweiterte Visualisierung**: **Heatmaps & Diagramme**, um Ergebnisse intuitiver darzustellen.  
 
+---
+
+## 📢 Live-Demo
+🎮 **Testen Sie Wahl-E hier:** [Wahl-E ausprobieren](#)  
+
+---
+
+## 🏆 Über den Entwickler
+Ich bin ein **angehender Informatiker für Systemintegration** und habe Wahl-E entwickelt, um meine Fähigkeiten in **Webentwicklung, Datenanalyse und UX-Design** zu demonstrieren. Dieses Projekt zeigt, wie **digitale Tools Transparenz in politische Prozesse bringen können**.
+
+🎨 **Portfolio**: [Hier ansehen](#)  
+
+---
+
+## 📬 Kontakt
+📧 **E-Mail:** [Ihre E-Mail-Adresse]  
+🔗 **LinkedIn:** [Ihr LinkedIn-Profil]  
+🐙 **GitHub:** [nakzyhyh](https://github.com/nakzyhyh)  
+
+---
