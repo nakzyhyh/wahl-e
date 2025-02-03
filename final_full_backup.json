@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "category": "Wirtschaft und Arbeit",
+      "id": 1,
+      "text": "Soll der Mindestlohn auf 15 Euro erhöht werden?",
+      "headline": "Mindestlohn erhöhen?",
+      "explanation": "Ein höherer Mindestlohn würde das Einkommen von Millionen Arbeitern verbessern.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Wirtschaft und Arbeit",
+      "id": 2,
+      "text": "Soll die Schuldenbremse reformiert werden, um mehr staatliche Investitionen zu ermöglichen?",
+      "headline": "Schuldenbremse reformieren?",
+      "explanation": "Eine Reform könnte den Handlungsspielraum des Staates erweitern.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Wirtschaft und Arbeit",
+      "id": 3,
+      "text": "Soll die Unternehmenssteuerbelastung auf unter 25 % gesenkt werden?",
+      "headline": "Unternehmenssteuer senken?",
+      "explanation": "Eine Senkung der Unternehmenssteuer könnte Investitionen anregen.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Wirtschaft und Arbeit",
+      "id": 4,
+      "text": "Soll Arbeit flexibler gestaltet werden, etwa durch eine wöchentliche statt tägliche Höchstarbeitszeit?",
+      "headline": "Arbeitszeit flexibler gestalten?",
+      "explanation": "Flexiblere Arbeitszeiten könnten die Vereinbarkeit von Beruf und Familie verbessern.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Wirtschaft und Arbeit",
+      "id": 5,
+      "text": "Soll es eine 4-Tage-Woche bei vollem Lohnausgleich geben?",
+      "headline": "4-Tage-Woche einführen?",
+      "explanation": "Eine 4-Tage-Woche könnte zu mehr Produktivität und Zufriedenheit führen.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Klima und Energie",
+      "id": 6,
+      "text": "Soll Deutschland bis 2040 zu 100 % auf erneuerbare Energien umsteigen?",
+      "headline": "Erneuerbare Energien ausbauen?",
+      "explanation": "Ein Umstieg auf erneuerbare Energien könnte den Klimaschutz fördern.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Klima und Energie",
+      "id": 7,
+      "text": "Soll die Nutzung von Atomkraft wieder erlaubt werden?",
+      "headline": "Atomkraft wieder erlauben?",
+      "explanation": "Atomkraft könnte eine emissionsarme Energiequelle darstellen.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Klima und Energie",
+      "id": 8,
+      "text": "Soll die CO₂-Abgabe abgeschafft werden?",
+      "headline": "CO₂-Abgabe abschaffen?",
+      "explanation": "Eine Abschaffung könnte Unternehmen entlasten, aber den Klimaschutz schwächen.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Klima und Energie",
+      "id": 9,
+      "text": "Soll das Verbrenner-Aus für Autos bis 2035 umgesetzt werden?",
+      "headline": "Verbrenner-Aus umsetzen?",
+      "explanation": "Ein Verbrenner-Aus könnte den Umstieg auf E-Mobilität beschleunigen.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Klima und Energie",
+      "id": 10,
+      "text": "Soll die Infrastruktur für E-Mobilität weiter ausgebaut werden?",
+      "headline": "E-Mobilität fördern?",
+      "explanation": "Der Ausbau könnte die Akzeptanz von Elektrofahrzeugen steigern.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Migration",
+      "id": 11,
+      "text": "Soll der Zugang zum Arbeitsmarkt für Geflüchtete erleichtert werden?",
+      "headline": "Arbeitsmarkt für Geflüchtete öffnen?",
+      "explanation": "Ein erleichterter Zugang könnte Integration und Fachkräftemangel adressieren.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Migration",
+      "id": 12,
+      "text": "Soll es keine Sozialleistungen für Geflüchtete geben, die aus sicheren Drittstaaten nach Deutschland einreisen?",
+      "headline": "Sozialleistungen für Geflüchtete streichen?",
+      "explanation": "Eine Streichung könnte Kosten reduzieren, aber humanitäre Auswirkungen haben.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Migration",
+      "id": 13,
+      "text": "Soll Asylverfahren in Drittstaaten durchgeführt werden?",
+      "headline": "Asylverfahren auslagern?",
+      "explanation": "Eine Auslagerung könnte Verfahren beschleunigen, birgt aber rechtliche Herausforderungen.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Migration",
+      "id": 14,
+      "text": "Soll die Einbürgerung erst nach mindestens 8 Jahren Aufenthalt möglich sein?",
+      "headline": "Einbürgerungskriterien verschärfen?",
+      "explanation": "Strengere Kriterien könnten die Integration erschweren.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Bildung",
+      "id": 15,
+      "text": "Soll Bildung von der Kita bis zum Studium komplett kostenfrei sein?",
+      "headline": "Bildung kostenfrei machen?",
+      "explanation": "Kostenfreie Bildung könnte Chancengleichheit fördern.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Bildung",
+      "id": 16,
+      "text": "Soll es einheitliche Lehrpläne und Prüfungen in allen Bundesländern geben?",
+      "headline": "Einheitliche Lehrpläne und Prüfungen?",
+      "explanation": "Einheitliche Standards könnten die Chancengleichheit im Bildungssystem erhöhen.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Bildung",
+      "id": 17,
+      "text": "Soll der Zugang zu digitalen Lernmitteln für alle Schüler verpflichtend gefördert werden?",
+      "headline": "Digitale Lernmittel fördern?",
+      "explanation": "Digitale Lernmittel könnten den Unterricht moderner und interaktiver gestalten.",
+      "options": ["Ja", "Nein", "Neutral"]
+    },
+    {
+      "category": "Gesellschaft und Demokratie",
+      "id": 36,
+      "text": "Soll die Rundfunkgebühr abgeschafft werden?",
+      "headline": "Rundfunkgebühr abschaffen?",
+      "explanation": "Die Abschaffung könnte Kosten sparen, aber die Unabhängigkeit der Medien gefährden.",
+      "options": ["Ja", "Nein", "Neutral"]
+    }
+  ]
+}

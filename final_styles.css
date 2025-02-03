@@ -1,0 +1,837 @@
+/* =====================================================
+   1. Global Reset & Basis
+===================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  color: #1d2d50; /* Standard Dunkelblau */
+  text-align: center;
+  line-height: 1.5;
+}
+
+a {
+  color: #00274d;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.8;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: #00274d;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* =====================================================
+   2. Navigation
+===================================================== */
+.bsw-header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.nav-logo a {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #00274d;
+}
+
+/* Navigation Liste */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.main-nav li a {
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #00274d;
+}
+.main-nav li a:hover {
+  color: #ffcc00;
+}
+
+/* Hamburger-Button */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #00274d;
+  cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+  .main-nav ul.show-links {
+    display: flex;
+  }
+}
+
+/* =====================================================
+   3. Hero-Bereich (Startseite)
+===================================================== */
+.hero-header {
+  position: relative;
+  height: 60vh;
+  background: url("pexels-element5-1550337.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0; /* top, right, bottom, left: 0 */
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+}
+.hero-overlay h1 {
+  font-size: 2.8em; /* leicht vergrößert */
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  -webkit-text-stroke: 1px #00274d;
+  color: #ffcc00; /* Gold für besseren Kontrast */
+}
+.hero-overlay p.slogan {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: #ffcc00;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+/* CTA-Bereich im Hero (für bessere Lesbarkeit mit Hintergrund) */
+.hero-cta {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%;       /* Optional: begrenzt die Breite, damit es nicht zu lang wird */
+  margin: 0 auto;       /* Zentriert den Bereich */
+}
+
+.hero-cta h2 {
+  font-size: 2.8em;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+  margin-bottom: 10px;
+}
+
+.hero-cta p {
+  font-size: 1.2em;
+  color: #fff;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+
+/* -----------------------------------------------------
+   Innovatives, professionelles Countdown Timer Redesign
+----------------------------------------------------- */
+/* -----------------------------------------------------
+   Innovatives, professionelles Countdown Timer Redesign
+----------------------------------------------------- */
+.countdown-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto 0; /* Etwas Abstand vom oberen Bereich */
+  padding: 10px 20px;  /* Reduziertes Padding */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.7));
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-header {
+  font-size: 1.4rem;  /* Etwas kleiner */
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+/* Neuer, professioneller Countdown Subtext */
+.countdown-subtext {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  /* Beispieltext – passen Sie ihn gern an */
+  /* Inhalt wird im HTML gesetzt, z.B.:
+     <p class="countdown-subtext">Die Neuwahlen 2025 rücken näher – treffen Sie jetzt fundierte Entscheidungen!</p>
+  */
+}
+
+/* Container für die Zeitboxen in einer Reihe */
+.time-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;  /* Leicht reduzierte Lücke */
+  width: 100%;
+}
+
+/* Zeitboxen für Tage, Stunden, Minuten, Sekunden */
+.time-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 12px;  /* Reduziertes Padding */
+  border-radius: 8px;
+  min-width: 50px;    /* Etwas schmaler */
+  text-align: center;
+}
+
+.time-box .time {
+  font-size: 1.8rem;  /* Reduzierte Schriftgröße */
+  font-weight: 700;
+  color: #fff;        /* Weiße Zahlen */
+  letter-spacing: 1px;
+}
+
+.time-box .label {
+  font-size: 0.8rem;  /* Etwas kleiner */
+  color: #ffcc00;     /* Goldener Akzent */
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Separator zwischen den Zeitboxen */
+.separator {
+  width: 2px;
+  height: 30px;  /* Reduzierte Höhe */
+  background: #ffcc00;
+  align-self: center;
+}
+
+/* CTA-Bereich im Hero – allgemeine Formatierung */
+.hero-cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* Neuer separater Slogan-Container */
+.hero-slogan {
+  display: inline-block;          /* Damit die Breite automatisch angepasst wird */
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+/* Slogan-Text */
+.hero-slogan p {
+  font-size: 1.9rem;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.cta-button,
+#apply-weights-btn,
+#start-quiz-btn {
+  background: linear-gradient(90deg, #ffcc00, #e6b800);
+  color: #00274d;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+.cta-button:hover,
+#apply-weights-btn:hover,
+#start-quiz-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+
+/* =====================================================
+   4. Feature-Sektion (Warum Wahl-E?)
+===================================================== */
+.features {
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px 0;
+}
+.features-title {
+  font-size: 2rem;
+  color: #00274d;
+  margin-bottom: 30px;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+.feature-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  text-align: center;
+  max-width: 250px; /* Feste Breite beibehalten */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+.icon-wrapper {
+  background: #ffcc00;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-wrapper i {
+  font-size: 1.5rem;
+  color: #00274d;
+}
+.feature-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #00274d;
+  font-weight: 700;
+}
+.feature-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Responsive Features Grid */
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr); /* Zwei Cards nebeneinander */
+  }
+}
+
+/* =====================================================
+   5. Countdown-Generator & Neuwahlen 2025 Bereich
+===================================================== */
+.countdown-generator-section {
+  background: #f9f9f9;
+  padding: 30px 0;
+  text-align: center;
+}
+.party-logos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.party-logo {
+  max-width: 80px; /* Logos auf 30px begrenzen */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.countdown-generator-section .hero {
+  margin-bottom: 20px;
+}
+.countdown-generator-section .hero h1 {
+  font-size: 2rem;
+  color: #00274d;
+  margin-bottom: 10px;
+}
+.countdown-generator-section .hero p {
+  font-size: 1rem;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto 1em;
+}
+.generator-area {
+  background: #fff;
+  padding: 30px;
+  border-top: 1px solid #eee;
+}
+.generator-area h1 {
+  font-size: 1.8em;
+  color: #00274d;
+  margin-bottom: 10px;
+}
+.generator-area .icon {
+  font-size: 2em;
+  color: #00274d;
+  margin-bottom: 10px;
+}
+.generator-area p {
+  max-width: 700px;
+  margin: 0 auto 15px;
+}
+/* Einheitliches CTA-Button-Design für beide Buttons */
+.cta-button,
+#apply-weights-btn,
+#start-quiz-btn {
+  background: linear-gradient(90deg, #ffcc00, #e6b800);
+  color: #00274d;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block;
+  margin: 20px auto; /* Zentriert */
+  text-align: center;
+}
+.cta-button:hover,
+#apply-weights-btn:hover,
+#start-quiz-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* =====================================================
+   6. Quiz-Bereich
+===================================================== */
+#quiz-section {
+  padding: 40px 0;
+}
+#question-container {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+#question-headline {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #00274d;
+}
+#question-text,
+#question-explanation {
+  font-size: 1.1em;
+  color: #333;
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: center;
+}
+#options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+#options button {
+  flex: 0 1 auto;
+  max-width: 180px;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #1d7874;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#options button:hover {
+  background: #35495e;
+}
+#navigation-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+#navigation-buttons button {
+  background: #ffcc00;
+  color: #00274d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#navigation-buttons button:hover {
+  background: #e6b800;
+}
+#progress-bar {
+  width: 80%;
+  margin: 10px auto;
+  background: #f4f4f4;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#progress {
+  width: 0;
+  height: 10px;
+  background: #ffcc00;
+  transition: width 0.3s;
+}
+
+/* =====================================================
+   7. Results-Bereich
+===================================================== */
+.result-section {
+  padding: 20px;
+  text-align: center;
+}
+#results, #results-detailed {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Ergebnisboxen: Optimierte Darstellung der Ergebnisse */
+.result-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  transition: transform 0.3s;
+  text-align: center;
+}
+.result-card:hover {
+  transform: translateY(-5px);
+}
+/* Innerer Header: Logo und Parteiname klar getrennt */
+.result-card .result-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.result-card .result-header img {
+  max-width: 60px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.result-card .party-name {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* Fortschrittsbalken */
+.match-bar {
+  width: 100%;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+.match-progress {
+  height: 100%;
+  transition: width 0.5s;
+}
+
+/* Accordion für Kernaussagen in Ergebnisboxen */
+.accordion {
+  background: #f8f9fa;
+  color: #00274d;
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 1.1em;
+  transition: background 0.3s;
+  width: 100%;
+}
+.accordion:hover {
+  background: #e0e0e0;
+}
+.details-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: none; /* Sofortiges Öffnen */
+  padding: 0 15px;
+}
+.details-content.active {
+  max-height: 1000px; /* ausreichend hoch */
+  padding: 15px;
+}
+.core-message {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #424242;
+  margin: 15px 0;
+}
+.transparency-info {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* =====================================================
+   8. Themenprioritäten (nun als statischer Bereich)
+===================================================== */
+#weight-and-explanation {
+  position: static;
+  width: 100%;
+  background: #fff;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+}
+#weight-and-explanation .modal-content {
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 6px;
+  text-align: left;
+  position: static;
+  box-shadow: none;
+}
+.close-modal {
+  display: none;
+}
+.slider-group {
+  margin-bottom: 15px;
+}
+
+/* =====================================================
+   9. Erklärung (Themengewichtung)
+===================================================== */
+.explanation-section {
+  background: #fff;
+  padding: 40px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: center;
+}
+.explanation-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #35495e;
+  margin-bottom: 15px;
+}
+.explanation-section p,
+.explanation-section li {
+  font-size: 1.1rem;
+  color: #1d2d50;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.explanation-section ol,
+.explanation-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 800px;
+}
+.explanation-section li::before {
+  content: "✔";
+  color: #ffcc00;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+/* =====================================================
+   10. Footer
+===================================================== */
+footer {
+  background: #00274d;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9em;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-section h2 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+.footer-section p,
+.footer-section a {
+  color: #fff;
+  font-size: 0.9em;
+}
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
+/* =====================================================
+   11. Responsive Anpassungen
+===================================================== */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2em;
+  }
+  .hero-overlay .slogan {
+    font-size: 1em;
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .generator-area h1 {
+    font-size: 1.6em;
+  }
+  #question-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #options button {
+    max-width: 100%;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+.party-cards {
+  padding: 40px 0;
+  background: #fff;
+}
+
+.section-title {
+  font-size: 2.5em;
+  color: #00274d;
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.party-card {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.party-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.party-card h3 {
+  font-size: 1.5em;
+  color: #00274d;
+  margin-bottom: 10px;
+}
+
+.party-card p {
+  font-size: 1em;
+  color: #1d2d50;
+}
+/* Undurchsichtiger Hintergrund (normal) */
+.element {
+  background-color: #000000;
+}
+
+/* Gleicher Hintergrund, aber mit 50% Transparenz */
+.element {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.party-logo {
+  max-width: 80px;
+  height: auto;
+  object-fit: contain; /* Alternativ: cover, falls es besser aussieht */
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    position: fixed; /* Ändere von absolute zu fixed */
+    top: 60px;       /* Angepasst zur Header-Höhe */
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    z-index: 1000;   /* Sicherstellen, dass es über anderen Elementen liegt */
+  }
+  
+  .main-nav ul.show-links {
+    display: flex;
+  }
+}
