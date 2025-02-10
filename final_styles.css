@@ -1,0 +1,920 @@
+/* =====================================================
+   1. Global Reset & Basis
+===================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  color: #1d2d50;
+  text-align: center;
+  line-height: 1.5;
+}
+
+a {
+  color: #00274d;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.8;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: #00274d;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* =====================================================
+   2. Navigation
+===================================================== */
+.bsw-header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.nav-logo a {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #00274d;
+}
+
+/* WICHTIG: Hier wird das Menü rechts ausgerichtet */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-left: auto; /* <-- Schiebt das UL nach rechts */
+}
+
+.main-nav li a {
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #00274d;
+}
+.main-nav li a:hover {
+  color: #ffcc00;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #00274d;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 1000;
+    margin-left: 0; /* Damit auf Mobile zentriert / normal */
+  }
+  .main-nav ul.show-links {
+    display: flex;
+  }
+}
+
+/* =====================================================
+   3. Hero-Bereich (Startseite)
+===================================================== */
+.hero-header {
+  position: relative;
+  min-height: 80vh;
+  background: url("pexels-element5-1550337.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero-box {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-slogan h1 {
+  font-size: 2.8em;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  -webkit-text-stroke: 0.5px #00274d;
+  color: #ffcc00;
+  margin-bottom: 0.5em;
+}
+.hero-slogan p {
+  font-size: 1.9rem;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.hero-subtext {
+  font-size: 1.2em;
+  color: #fff;
+  margin: 10px auto;
+  max-width: 800px;
+  line-height: 1.4;
+  padding: 0 10px;
+}
+.hero-box small {
+  display: block;
+  margin: 10px auto 0;
+  max-width: 90%;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #fff; 
+  opacity: 1;  
+  text-align: center;
+}
+
+/* =====================================================
+   4. CTA-Buttons
+===================================================== */
+.cta-button,
+#apply-weights-btn,
+#start-quiz-btn {
+  background: linear-gradient(90deg, #ffcc00, #e6b800);
+  color: #00274d;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.cta-button:hover,
+#apply-weights-btn:hover,
+#start-quiz-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* =====================================================
+   5. Feature-Sektion (Warum Wahl-E?)
+===================================================== */
+.features {
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px 0;
+}
+.features-title {
+  font-size: 2rem;
+  color: #00274d;
+  margin-bottom: 30px;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+.feature-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 20px;
+  text-align: center;
+  max-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+.icon-wrapper {
+  background: #ffcc00;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-wrapper i {
+  font-size: 1.5rem;
+  color: #00274d;
+}
+.feature-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #00274d;
+  font-weight: 700;
+}
+.feature-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================================================
+   6. Quiz-Bereich
+===================================================== */
+#quiz-section {
+  padding: 40px 0;
+}
+#question-container {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+#question-headline {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #00274d;
+}
+#question-text,
+#question-explanation {
+  font-size: 1.1em;
+  color: #333;
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: center;
+}
+#options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+#options button {
+  flex: 0 1 auto;
+  max-width: 180px;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #1d7874;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#options button:hover {
+  background: #35495e;
+}
+#navigation-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+#navigation-buttons button {
+  background: #ffcc00;
+  color: #00274d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#navigation-buttons button:hover {
+  background: #e6b800;
+}
+#progress-bar {
+  width: 80%;
+  margin: 10px auto;
+  background: #f4f4f4;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#progress {
+  width: 0;
+  height: 10px;
+  background: #ffcc00;
+  transition: width 0.3s;
+}
+
+/* =====================================================
+   7. Results-Bereich
+===================================================== */
+.result-section {
+  padding: 20px;
+  text-align: center;
+}
+#results,
+#results-detailed {
+  margin: 20px auto;
+  max-width: 800px;
+}
+.result-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  transition: transform 0.3s;
+  text-align: center;
+}
+.result-card:hover {
+  transform: translateY(-5px);
+}
+.result-card .result-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.result-card .result-header img {
+  max-width: 60px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.result-card .party-name {
+  font-size: 1.2em;
+  margin: 0;
+}
+.match-bar {
+  width: 100%;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+.match-progress {
+  height: 100%;
+  transition: width 0.5s;
+}
+
+/* Accordion */
+.accordion {
+  background: #f8f9fa;
+  color: #00274d;
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 1.1em;
+  transition: background 0.3s;
+  width: 100%;
+}
+.accordion:hover {
+  background: #e0e0e0;
+}
+.details-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: none;
+  padding: 0 15px;
+}
+.details-content.active {
+  max-height: 1000px;
+  padding: 15px;
+}
+.core-message {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #424242;
+  margin: 15px 0;
+}
+.transparency-info {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* =====================================================
+   8. Themenprioritäten (statischer Bereich)
+===================================================== */
+#weight-and-explanation {
+  position: static;
+  width: 100%;
+  background: #fff;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+}
+#weight-and-explanation .modal-content {
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 6px;
+  text-align: left;
+  position: static;
+  box-shadow: none;
+}
+.close-modal {
+  display: none;
+}
+.slider-group {
+  margin-bottom: 15px;
+}
+
+/* =====================================================
+   9. Erklärung (Themengewichtung)
+===================================================== */
+.explanation-section {
+  background: #fff;
+  padding: 40px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: center;
+}
+.explanation-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #35495e;
+  margin-bottom: 15px;
+}
+.explanation-section p,
+.explanation-section li {
+  font-size: 1.1em;
+  color: #1d2d50;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.explanation-section ol,
+.explanation-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 800px;
+}
+.explanation-section li::before {
+  content: "✔";
+  color: #ffcc00;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+/* =====================================================
+   10. Footer
+===================================================== */
+footer {
+  background: #00274d;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9em;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-section h2 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+.footer-section p,
+.footer-section a {
+  color: #fff;
+  font-size: 0.9em;
+}
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
+/* =====================================================
+   11. Zusätzliche Sektionen (z. B. Party Cards)
+===================================================== */
+.party-cards {
+  padding: 40px 0;
+  background: #fff;
+}
+.section-title {
+  font-size: 2.5em;
+  color: #00274d;
+  margin-bottom: 20px;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.party-card {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.party-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.party-card h3 {
+  font-size: 1.5em;
+  color: #00274d;
+  margin-bottom: 10px;
+}
+.party-card p {
+  font-size: 1em;
+  color: #1d2d50;
+}
+
+/* =====================================================
+   12. Allgemeine Elemente
+===================================================== */
+.element {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.party-logo {
+  max-width: 80px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* =====================================================
+   13. Responsive Anpassungen
+===================================================== */
+@media (max-width: 768px) {
+  .hero-slogan h1 {
+    font-size: 2em;
+  }
+  .hero-slogan p,
+  .hero-subtext {
+    font-size: 1.2em;
+    padding: 0 10px;
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #question-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-cta {
+    max-width: 95%;
+  }
+  .hero-slogan h1 {
+    font-size: 1.8em;
+  }
+  .hero-slogan p,
+  .hero-subtext {
+    font-size: 1.1em;
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #options button {
+    max-width: 100%;
+  }
+}
+
+/* Scroll-Verhalten */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========== WIE-FUNKTIONIERT-WAHL-E (HOW IT WORKS) ========== */
+.how-it-works {
+  margin: 50px auto;
+  text-align: center;
+}
+.hiw-title {
+  font-size: 2rem;
+  color: #00274d;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* Container für die Steps + Pfeile */
+.hiw-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px; 
+}
+
+/* Einzelner Step */
+.hiw-step {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 20px;
+  max-width: 250px;
+  text-align: center;
+}
+.hiw-step .icon-wrapper {
+  background: #ffcc00;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hiw-step .icon-wrapper i {
+  font-size: 1.5rem;
+  color: #00274d;
+}
+.hiw-step h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #00274d;
+  font-weight: 700;
+}
+.hiw-step p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Pfeile */
+.hiw-arrow i {
+  font-size: 2rem;
+  color: #00274d;
+  margin: 0 10px;
+}
+
+@media (max-width: 992px) {
+  .hiw-steps {
+    gap: 10px;
+  }
+  .hiw-step {
+    max-width: 200px;
+    padding: 15px;
+  }
+  .hiw-step p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 576px) {
+  .hiw-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hiw-arrow {
+    display: none; 
+  }
+  .hiw-step {
+    max-width: 280px;
+    margin-bottom: 20px;
+  }
+}
+
+/* =========================================
+   Real-O-Mat-Stil: "Wie funktioniert Wahl-E?" 
+   mit Gradient-Hintergrund und Kacheln
+========================================= */
+.how-works-gradient {
+  background: linear-gradient(90deg, #ffe597 0%, #ffeca3 30%, #fff7c7 60%, #ffffff 100%);
+  padding: 60px 20px;
+  text-align: center;
+}
+.hwg-title {
+  font-size: 2rem;
+  color: #00274d;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.hwg-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+.hwg-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.hwg-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.hwg-icon {
+  width: 60px;
+  height: 60px;
+  background: #ffcc00;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hwg-icon i {
+  font-size: 1.6rem;
+  color: #00274d;
+}
+.hwg-item h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #00274d;
+  margin-bottom: 10px;
+}
+.hwg-item p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+  margin: 0 auto;
+  max-width: 250px;
+}
+@media (max-width: 768px) {
+  .hwg-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  .hwg-grid {
+    gap: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .hwg-title {
+    font-size: 1.6rem;
+  }
+  .hwg-item p {
+    font-size: 0.9rem;
+  }
+}
+
+/************************************************************
+ * Logo + Header-Subinfo
+************************************************************/
+.nav-logo {
+  display: flex;
+  align-items: center; 
+  gap: 1rem; 
+}
+
+.logo-link {
+  font-size: 1.8em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #00274d;
+}
+.logo-link span:first-child {
+  color: #00274d; 
+}
+.logo-link span:last-child {
+  color: #ffcc00; 
+  margin-left: 3px;
+}
+
+.header-subinfo {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center; 
+  gap: 10px; 
+  font-size: 0.9em; 
+  color: #00274d;
+}
+
+.helper-info {
+  white-space: nowrap;
+}
+.neuwahlen-info {
+  background: #ffcc00;
+  color: #00274d;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .header-subinfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.hidden {
+  display: none !important;
+}
+/* Allgemeine Schriftarten für den Body */
+body {
+  font-family: 'Roboto', sans-serif; /* Standard-Schriftart */
+}
+
+/* Startseite */
+#start-section {
+  font-family: 'Montserrat', sans-serif; /* Elegante und moderne Schrift für die Startseite */
+  font-weight: 700;
+}
+
+/* Über mich */
+#about-me {
+  font-family: 'Open Sans', sans-serif; /* Gute Lesbarkeit für den Text in diesem Bereich */
+  font-weight: 400;
+}
+
+/* FAQ */
+#faq {
+  font-family: 'Roboto', sans-serif; /* Robuste Schriftart für die FAQ */
+  font-weight: 500;
+}
+
+/* Kontakt */
+#contact {
+  font-family: 'Montserrat', sans-serif; /* Stilvolle Schrift für den Kontaktbereich */
+  font-weight: 500;
+}
+
+/* Zusätzliche Anpassungen für Überschriften */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif; /* Modernere Schriftart für die Überschriften */
+  font-weight: 700;
+}
+
+/* Textabsätze */
+p {
+  font-family: 'Open Sans', sans-serif; /* Gute Lesbarkeit für Absätze */
+  font-weight: 400;
+}
+
+/* Links */
+a {
+  font-family: 'Roboto', sans-serif; /* Schriftart für Links */
+  text-decoration: none;
+  color: #00274d;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ffcc00; /* Highlight für Links */
+}

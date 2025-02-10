@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wahl-E – Dein unabhängiger Wahlhelfer</title>
+  <meta name="description" content="Wahl-E – Deine fundierte Wahlhilfe. Informiere dich über politische Themen, vergleiche Wahlprogramme und echte Abstimmungsdaten und triff eine unabhängige Entscheidung." />
+
+  <!-- Google Fonts Import -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Externes CSS -->
+  <link rel="stylesheet" href="final_styles.css" />
+
+  <!-- Font Awesome für Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <style>
+    /* Übergangsweise – spätere Feinschliffe kommen in final_styles.css */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Elemente mit .hidden werden ausgeblendet */
+    .hidden {
+      display: none !important;
+    }
+    /* Ergebnisanleitung direkt oben im Ergebnisbereich */
+    .result-instructions {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin: 20px auto;
+      border-radius: 6px;
+      max-width: 800px;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .result-instructions h2 {
+      margin-top: 0;
+      font-size: 1.8em;
+      color: #00274d;
+    }
+    .result-instructions ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================================
+       HEADER & NAVIGATION
+  ====================================== -->
+  <header class="bsw-header">
+    <div class="nav-container container">
+      <!-- Logo & Neuwahlen-Info -->
+      <div class="nav-logo">
+        <a href="#" class="logo-link">
+          <span>WAHL</span><span>-E</span>
+        </a>
+        <div class="header-subinfo">
+          <span class="helper-info">- Dein unabhängiger Wahlhelfer</span>
+          <span class="neuwahlen-info">Neuwahlen 2025</span>
+        </div>
+      </div>
+
+      <!-- Hauptnavigation -->
+      <nav class="main-nav" role="navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Navigation ein-/ausklappen">☰</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Start</a></li>
+          <li>
+            <a href="https://github.com/nakzyhyh/nakzyhyh" target="_blank" rel="noopener noreferrer">Über mich</a>
+          </li>
+          <li><a href="#faq-section">FAQ</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================
+       HERO-SECTION
+  ====================================== -->
+  <section class="hero-header" id="home" style="background: url('pexels-element5-1550337.jpg') center/cover no-repeat; height: 70vh;">
+    <div class="hero-overlay">
+      <div class="hero-box">
+        <div class="hero-slogan">
+          <br />
+          <p>Deine Zukunft, Deine Wahl – Transparent. Fundiert. Unabhängig.</p>
+        </div>
+        <br />
+        <p class="hero-subtext">
+          Vergleiche deine politischen Ansichten mit den Wahlprogrammen der Parteien und profitiere von einer umfassenden, tiefgreifenden Analyse sämtlicher Parteiprogramme.  
+          Darüber hinaus liefern dir reale Abstimmungsdaten zusätzliche Einblicke in das tatsächliche Handeln der Parteien im Parlament.  
+          So triffst du deine Wahl fundiert, bewusst und mit einem klaren Blick auf alle relevanten Fakten.
+        </p>
+        <br />
+        <button id="start-quiz-btn" class="cta-button">Starte deinen Parteienvergleich</button>
+        <small style="display: block; margin-top: 10px; font-size: 0.8rem; color: #fff;">
+          Nutze WAHL-E als Entscheidungshilfe, aber triff deine Wahl auf Basis deiner eigenen Überzeugungen und Prioritäten.
+        </small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================
+       SECTION: Wie funktioniert Wahl-E? (Gradient-Stil)
+  ====================================== -->
+  <section class="how-works-gradient" id="how-it-works">
+    <h2 class="hwg-title">Wie funktioniert Wahl-E?</h2>
+    <div class="hwg-grid">
+      <!-- Kachel 1 -->
+      <div class="hwg-item">
+        <div class="hwg-icon">
+          <i class="fas fa-balance-scale"></i>
+        </div>
+        <h3>Objektive Analyse</h3>
+        <p>Profitiere von neutralen, datenbasierten Bewertungen, die dir helfen, fundierte Entscheidungen zu treffen.</p>
+      </div>
+      <!-- Kachel 2 -->
+      <div class="hwg-item">
+        <div class="hwg-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Transparenter Vergleich</h3>
+        <p>Vergleiche Programme &amp; Abstimmungen der Parteien klar und verständlich auf Basis deiner Antworten.</p>
+      </div>
+      <!-- Kachel 3 -->
+      <div class="hwg-item">
+        <div class="hwg-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>Fundierte Informationen</h3>
+        <p>Erhalte ausführliche Erklärungen zu relevanten Themen, die deine Wahlentscheidung optimal unterstützen.</p>
+      </div>
+      <!-- Kachel 4 -->
+      <div class="hwg-item">
+        <div class="hwg-icon">
+          <i class="fas fa-lock"></i>
+        </div>
+        <h3>Datenschutz &amp; Sicherheit</h3>
+        <p>Deine Daten sind bei uns sicher – wir garantieren absolute Neutralität und hohen Schutz deiner Privatsphäre.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================
+       QUIZ-BEREICH
+  ====================================== -->
+  <main class="container" id="quiz-section">
+    <!-- Fragencontainer (wird dynamisch befüllt) -->
+    <div id="question-container" class="hidden">
+      <h2 id="question-headline"></h2>
+      <p id="question-text"></p>
+      <p id="question-explanation"></p>
+      <div id="options"></div>
+      <div id="progress-bar" style="margin-top: 20px; background: #eee; border-radius: 6px; overflow: hidden;">
+        <div id="progress" style="height: 15px; background: #ffcc00; transition: width 0.3s;"></div>
+      </div>
+      <div id="navigation-buttons">
+        <button id="prev-btn" class="hidden">Zurück</button>
+        <button id="next-btn">Weiter</button>
+      </div>
+    </div>
+
+    <!-- Ergebnisbereich -->
+    <section id="result-section" class="result-section hidden">
+      <div id="result-scroll-target">
+        <h2 class="result-title">Deine Ergebnisse</h2>
+        <!-- Ergebnisanleitung -->
+        <div class="result-instructions">
+          <p>Basierend auf deinen Antworten haben wir deinen persönlichen Vergleich erstellt. Jede Partei wird dir mit einem Prozentsatz angezeigt – dieser gibt an, wie stark deine Antworten mit den Positionen der Parteien übereinstimmen.</p>
+          <p><strong>Was du siehst:</strong></p>
+          <ul>
+            <li><strong>Übereinstimmungsprozentsatz:</strong> Zeigt, wie gut deine Antworten mit den wesentlichen Positionen der Parteien korrespondieren.</li>
+            <li><strong>Kernaussagen:</strong> Hier findest du eine zusammengefasste, zentrale Botschaft der jeweiligen Partei.</li>
+            <li><strong>Zusätzliche Stellungnahmen:</strong> Durch Klick auf „Kernaussagen“ öffnet sich ein Bereich, in dem alle ergänzenden Informationen aus unseren aktuellen Abstimmungsdaten angezeigt werden – inklusive des genauen Wortlauts der Fragestellungen und der dazugehörigen Kommentare.</li>
+          </ul>
+          <p><strong>Warum das wichtig ist:</strong> Unsere fundierte Analyse stützt sich nicht nur auf einen einfachen Vergleich, sondern auch auf zusätzliche Daten, die dir zeigen, wie die Parteien in der Praxis abstimmen. So erhältst du einen transparenten und umfassenden Überblick über die politischen Entscheidungen und kannst deine Wahlentscheidung noch besser fundieren.</p>
+          <p>Vertraue auf unsere Analyse und nutze die detaillierten Informationen, um ein vollständiges Bild der politischen Landschaft zu bekommen!</p>
+        </div>
+      </div>
+      <div id="results"></div>
+      <button id="restart-btn" class="hidden">Neustart</button>
+    </section>
+
+    <!-- Detaillierte Ergebnis-Sektion (optional) -->
+    <section class="result-section hidden">
+      <div id="results-detailed"></div>
+      <div id="detailed-results"></div>
+    </section>
+
+    <!-- ======================================
+         THEMENPRIORITÄTEN (Slider) Section
+         Wird nach showResults() eingeblendet
+    ====================================== -->
+    <section id="priority-settings" class="explanation-section container hidden" style="margin-bottom: 40px;">
+      <h2>Themenprioritäten anpassen</h2>
+      <p>
+        Mit dieser Funktion kannst du deine persönlichen politischen Schwerpunkte festlegen und die Gewichtung einzelner Themenbereiche individuell einstellen.
+      </p>
+      <h3>So funktioniert die Anpassung:</h3>
+      <ol>
+        <li><strong>Auswahl der Themen:</strong> Wähle die für dich wichtigsten politischen Themen aus.</li>
+        <li><strong>Gewichtung:</strong> Passe mittels der Schieberegler die Priorität der einzelnen Themen an.</li>
+        <li><strong>Anwendung:</strong> Klicke auf <strong>Änderungen anwenden</strong>, um deine Einstellungen zu speichern und die Ergebnisse zu aktualisieren.</li>
+      </ol>
+      <!-- Slider-Gruppen -->
+      <div class="slider-group">
+        <label for="climateSlider">Klima und Energie (0.5 bis 3):</label>
+        <input type="range" id="climateSlider" min="0.5" max="3" step="0.5" value="1" />
+        <span id="climateSliderValue">1</span>
+      </div>
+      <div class="slider-group">
+        <label for="migrationSlider">Migration (0.5 bis 3):</label>
+        <input type="range" id="migrationSlider" min="0.5" max="3" step="0.5" value="1" />
+        <span id="migrationSliderValue">1</span>
+      </div>
+      <div class="slider-group">
+        <label for="bildungSlider">Bildung (0.5 bis 3):</label>
+        <input type="range" id="bildungSlider" min="0.5" max="3" step="0.5" value="1" />
+        <span id="bildungSliderValue">1</span>
+      </div>
+      <button id="apply-weights-btn" class="cta-button">Änderungen anwenden</button>
+    </section>
+  </main>
+
+  <!-- ======================================
+       FAQ-BEREICH
+  ====================================== -->
+  <section id="faq-section" class="faq-section container" style="padding: 40px 0; background: #fff;">
+    <h2 class="faq-title" style="font-size: 2.5em; color: #00274d; margin-bottom: 20px;">Häufig gestellte Fragen (FAQ)</h2>
+    <div class="faq-item" style="margin-bottom: 15px;">
+      <details>
+        <summary style="font-size: 1.2em; font-weight: bold; cursor: pointer; color: #00274d;">Wie funktioniert Wahl-E?</summary>
+        <p style="font-size: 1em; color: #1d2d50; margin-top: 10px;">
+          Wahl-E basiert auf einem interaktiven Fragebogen mit 46 gezielten Fragen zu zentralen politischen Themen. Deine Antworten werden mit den Wahlprogrammen und realen Abstimmungsdaten der Parteien verglichen, sodass du eine objektive Entscheidungshilfe erhältst.
+        </p>
+      </details>
+    </div>
+    <!-- Weitere FAQ-Items hier -->
+  </section>
+
+  <!-- ======================================
+       FOOTER
+  ====================================== -->
+  <footer>
+    <div class="footer-content container" style="padding: 30px 0; border-top: 2px solid #ffcc00;">
+      <!-- Über Wahl-E -->
+      <div class="footer-section" style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h2 style="font-size: 1.8em; color: #ffcc00; margin-bottom: 10px;">Über Wahl-E</h2>
+        <p style="font-size: 1em; color: #fff;">
+          Wahl-E ist ein Tool für Transparenz und fundierte Wahlentscheidungen – deine Informationsquelle für eine unabhängige und bewusste Wahl.
+        </p>
+      </div>
+      <!-- Kontakt -->
+      <div class="footer-section" style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h2 style="font-size: 1.8em; color: #ffcc00; margin-bottom: 10px;">Kontakt</h2>
+        <p style="font-size: 1em; color: #fff;">
+          Email: <a href="mailto:kaihoelters@icloud.com" style="color: #fff; text-decoration: underline;">kaihoelters@icloud.com</a>
+        </p>
+      </div>
+      <!-- GitHub-Projekt -->
+      <div class="footer-section" style="flex: 1; min-width: 250px; margin-bottom: 20px;">
+        <h2 style="font-size: 1.8em; color: #ffcc00; margin-bottom: 10px;">GitHub-Projekt</h2>
+        <p style="font-size: 1em; color: #fff;">
+          Sieh dir den Quellcode auf <a href="https://github.com/nakzyhyh" target="_blank" style="color: #fff; text-decoration: underline;">GitHub</a> an.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom" style="padding: 15px 0; background: #001f33;">
+      <p style="font-size: 0.8em; color: #fff;">
+        © 2025 Kai Hölters. Alle Rechte vorbehalten. | <a href="/datenschutz.html" style="color: #fff; text-decoration: underline;">Datenschutzerklärung</a> | <a href="/impressum.html" style="color: #fff; text-decoration: underline;">Impressum</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ======================================
+       SCRIPTS
+  ====================================== -->
+
+  <!-- Navigation & Quiz-Logik (Inline-Skript für Navigation) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      toggleBtn.addEventListener("click", () => {
+        const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
+        toggleBtn.setAttribute("aria-expanded", !isExpanded);
+        navLinks.classList.toggle("show-links");
+      });
+    });
+  </script>
+
+  <!-- Laden der data.js-Daten, bevor final_script.js -->
+  <script src="data.js"></script>
+
+  <!-- Jetzt dein final_script -->
+  <script src="final_script.js"></script>
+
+  <!-- Zusätzlicher Aufruf zum Laden der Supplementary-Daten -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof initializeSupplementaryData === "function") {
+        initializeSupplementaryData();
+      }
+    });
+  </script>
+
+</body>
+</html>
