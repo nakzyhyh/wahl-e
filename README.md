@@ -1,102 +1,64 @@
-# Wahl-E - Der transparente Wahlkompass 🚀
 
-Wahl-E ist eine interaktive Wahlhilfe, die es Nutzern ermöglicht, ihre politischen Übereinstimmungen mit verschiedenen Parteien zu berechnen. Im Gegensatz zu traditionellen Tools wie dem Wahl-O-Mat legt Wahl-E besonderen Wert auf **vollständige Transparenz, Open-Source-Zugänglichkeit und nachvollziehbare Berechnungsmodelle**.
+# Wahl‑E – Der Transparente Wahlkompass
 
----
+**Wahl‑E** ist eine moderne, datengestützte Webanwendung, die es dir ermöglicht, deine politischen Ansichten mit den Parteiprogrammen verschiedener politischer Akteure zu vergleichen. Dank der Integration von realen Abstimmungsdaten aus dem Parlament erhältst du nicht nur einen statischen Vergleich, sondern auch einen tiefgehenden Einblick in das tatsächliche Handeln der Parteien. So kannst du deine Wahl fundiert, bewusst und auf Basis aller relevanten Fakten treffen.
 
-## 🌍 Was ist Wahl-E?
+## Funktionen
 
-Wahl-E bietet eine **plattformunabhängige Web-App**, mit der politische Positionen und Standpunkte mit den Programmen der Parteien verglichen werden können. Alle Fragen, Antworten und Berechnungen sind **offen einsehbar**, um eine transparente und fundierte Entscheidungsgrundlage zu schaffen. Ziel ist es, **politisches Wissen** zu vermitteln und eine **unabhängige, datenbasierte Orientierungshilfe** zu bieten.
+- **Umfassende Analyse:**  
+  Beantworte einen strukturierten Fragenkatalog zu einer Vielzahl politischer Themen. Deine Antworten werden mit den aktuellen Positionen der Parteien verglichen, sodass du deinen persönlichen politischen Fingerabdruck erhältst.
 
----
+- **Integration Reeller Abstimmungsdaten:**  
+  Neben den Parteiprogrammen werden auch reale Abstimmungsdaten genutzt, um dir zu zeigen, wie die Parteien in der Praxis agieren. Dies schafft eine zusätzliche Ebene der Transparenz und liefert dir detaillierte Einblicke in konkrete politische Entscheidungen.
 
-## 🔥 Features & Vorteile
+- **Transparente Berechnungsmodelle:**  
+  Alle Berechnungen und Gewichtungen sind offen nachvollziehbar. Unsere mathematisch fundierte Logik basiert auf öffentlich zugänglichen Daten und ermöglicht dir, den Entstehungsprozess deines Vergleichsergebnisses im Detail nachzuvollziehen.
 
-### ⚡ **Transparenz & Open Source**
-- **Öffentlich einsehbar**: Alle Fragen, Antworten der Parteien und die Berechnungslogik sind **öffentlich zugänglich**.
-- **Keine Black-Box-Algorithmen**: Wahl-E nutzt **offene mathematische Modelle**, die die Berechnung der politischen Übereinstimmung **vollständig nachvollziehbar** machen.
+- **Modularer Fragenkatalog:**  
+  Mit einer breiten Themenabdeckung, von Wirtschaft über Klima und Migration bis hin zu Bildung und Gesundheit, bietet Wahl‑E einen flexiblen und anpassbaren Vergleich. Du kannst gezielt Schwerpunkte setzen und erhältst so ein personalisiertes Ergebnis.
 
-### 🔍 **Informative Erklärungen**
-- **Hintergrundinfos zu jeder Frage**: Politische Fragen werden mit **wissenschaftlich fundierten** Erklärungen aus validierten Quellen ergänzt.
-- **Kontextbezogene Darstellungen**: Politische Themen werden sowohl aus nationaler als auch internationaler Perspektive betrachtet.
+- **Benutzerfreundlichkeit und Datenschutz:**  
+  Die Anwendung ist vollständig browserbasiert – ohne Installation, Registrierung oder Speicherung persönlicher Daten. Alle Berechnungen laufen lokal in deinem Browser, was maximale Privatsphäre gewährleistet.
 
-### 📊 **Flexibler Fragenkatalog**
-- **Breite Themenabdeckung**: Bis zu **40 Themenbereiche**, darunter **Wirtschaft, Klima, Digitalisierung, Migration, Bildung und Gesundheit**.
-- **Modularer Aufbau**: Nutzer können **individuelle Themenbereiche** auswählen, um ein **personalisiertes Ergebnis** zu erhalten.
+## Vorteile von Wahl‑E
 
-### 🔓 **Unabhängigkeit & Sicherheit**
-- **Neutral & unabhängig**: Wahl-E ist ein **freies und unabhängiges** Open-Source-Projekt, ohne Verbindung zu Parteien oder Institutionen.
-- **Datenschutzfreundlich**: Keine Speicherung von persönlichen Daten – alle Berechnungen laufen **lokal im Browser**.
+Wahl‑E überzeugt durch:
 
-### 🌐 **Interaktiv & Benutzerfreundlich**
-- **Vollständig browserbasiert**: Erfordert **keine Installation oder Registrierung**.
-- **Optimiertes UI/UX**: Responsive Design für **Desktop, Tablet & Smartphone**.
+- **Tiefe und Transparenz:**  
+  Durch die Kombination von Parteiprogrammen und realen Abstimmungsdaten entsteht ein ganzheitliches Bild der politischen Landschaft. Du siehst nicht nur, was in den Programmen steht, sondern auch, wie die Parteien in der Praxis agieren.
 
----
+- **Nachvollziehbare Ergebnisse:**  
+  Unser Open‑Source‑Ansatz ermöglicht es jedem, den Berechnungsprozess zu überprüfen. Keine Black‑Box‑Algorithmen – du siehst genau, wie dein Ergebnis zustande kommt.
 
-## 🛠 Technologie-Stack
+- **Flexibilität und Anpassbarkeit:**  
+  Wähle aus zahlreichen Themenbereichen und passe die Gewichtung einzelner Themen an deine persönlichen Schwerpunkte an. So erhältst du ein Ergebnis, das genau zu deinen politischen Interessen passt.
 
-### 🎨 **Frontend**
-- **HTML, CSS & JavaScript**: Dynamische Interaktivität wird durch ein **modulares Vanilla-JavaScript-Framework** realisiert.
-- **React.js (geplant)**: Zukunftsorientierte Weiterentwicklung für verbesserte Performance.
+## Technologie‑Stack
 
-### ☁️ **Hosting & CI/CD**
-- **Gehostet auf Netlify** unter: [https://heartfelt-naiad-8e7fff.netlify.app/](https://heartfelt-naiad-8e7fff.netlify.app/)
-- **Optimierte Ladezeiten** durch **Code-Splitting und Minifizierung**.
+- **Frontend:**  
+  HTML, CSS und JavaScript (Vanilla) für dynamische Interaktivität und ein responsives Design.
 
-### 📊 **Datenanalyse & Algorithmen**
-- **Automatische Erfassung & Analyse von Parteiprogrammen** zur dynamischen Gewichtung der Antworten.
-- **Machine-Learning-Modelle (geplant)** zur Verbesserung der Nutzerempfehlungen.
+- **Datenanalyse:**  
+  Transparent implementierte Algorithmen zur Berechnung der politischen Übereinstimmung, basierend auf einem modularen Fragenkatalog und realen Abstimmungsdaten.
 
-### 📡 **IoT & Live-Analytics (zukünftige Features)**
-- **Integration mit Smart Devices** zur Echtzeit-Abstimmung und Benachrichtigung über politische Ereignisse.
-- **Live-Analyse von Umfragen** mittels **Edge-Computing** für aktuelle politische Trends.
+- **Open Source:**  
+  Der vollständige Quellcode ist öffentlich einsehbar – für maximale Transparenz und Community‑basiertes Feedback.
 
----
+## Installation und Nutzung
 
-## 🎯 So funktioniert Wahl-E
+Wahl‑E ist vollständig browserbasiert und benötigt keine Installation. Öffne die Anwendung einfach in einem modernen Browser, um sofort loszulegen. Der Quellcode steht in unserem [GitHub‑Repository](https://github.com/nakzyhyh) zur Verfügung, sodass du jederzeit einen Blick in die Implementierung werfen oder selbst beitragen kannst.
 
-1️⃣ **Beantworten Sie Fragen**: Wählen Sie eine Antwortoption für jede Frage (**Ja, Nein, Neutral**).  
-2️⃣ **Erhalten Sie Ihr Ergebnis**: Eine **tabellarische Übersicht** zeigt die **politische Übereinstimmung mit den Parteien**.  
-3️⃣ **Lernen Sie dazu**: Nutzen Sie die **detaillierten Erklärungen**, um mehr über politische Themen und Positionen zu erfahren.
+## Mitwirken
+
+Beiträge sind willkommen! Forke das Repository, implementiere Verbesserungen oder neue Features und erstelle Pull‑Requests. Für Fragen oder Diskussionen nutze bitte die [Issues‑Sektion](https://github.com/nakzyhyh/issues) auf GitHub.
+
+## Lizenz
+
+Wahl‑E wird unter der MIT‑Lizenz bereitgestellt. Details findest du in der [LICENSE‑Datei](LICENSE).
 
 ---
 
-## 📝 Beispielhafte Fragen & Erklärungen
-
-🔹 **Frage:** Soll der Mindestlohn auf 15 Euro erhöht werden?  
-💡 **Erklärung:** Der gesetzliche Mindestlohn beträgt derzeit 12 Euro. Eine Anhebung könnte die Kaufkraft stärken, aber mögliche Arbeitsplatzverluste sind umstritten.  
-
-🔹 **Frage:** Soll die Schuldenbremse reformiert werden, um mehr staatliche Investitionen zu ermöglichen?  
-💡 **Erklärung:** Die Schuldenbremse begrenzt die Neuverschuldung des Staates. Gegner argumentieren, sie verhindere notwendige Investitionen, während Befürworter sie als Schutz vor Überschuldung sehen.  
+**Wahl‑E** steht für Transparenz, datenbasierte Analyse und fundierte politische Entscheidungsfindung. Vertraue auf unsere Technologie und nutze die detaillierten Informationen, um ein umfassendes Bild der politischen Landschaft zu erhalten – so triffst du deine Wahl ganz bewusst und gut informiert.
 
 ---
-
-## 🚀 Zukünftige Erweiterungen
-
-🔹 **Erweiterung des Fragenkatalogs**: Bis zu **40 politische Fragen** zur besseren Abdeckung aktueller Themen.  
-🔹 **Mehrsprachigkeit**: Unterstützung für **Englisch, Französisch und weitere Sprachen**.  
-🔹 **Erweiterte Visualisierung**: **Heatmaps & Diagramme**, um Ergebnisse intuitiver darzustellen.  
-
----
-
-## 📢 Live-Demo
-🎮 **Testen Sie Wahl-E hier:** [https://heartfelt-naiad-8e7fff.netlify.app/](https://heartfelt-naiad-8e7fff.netlify.app/)  
-
----
-
-## 🏆 Über den Entwickler
-Ich bin ein **angehender Informatiker für Systemintegration** und habe Wahl-E entwickelt, um meine Fähigkeiten in **Webentwicklung, Datenanalyse und UX-Design** zu demonstrieren. Dieses Projekt zeigt, wie **digitale Tools Transparenz in politische Prozesse bringen können**.
-
-🎨 **Portfolio**: [Hier ansehen](#)  
-
----
-
-## 📬 Kontakt
-📧 **E-Mail:** [Ihre E-Mail-Adresse]  
-🔗 **LinkedIn:** [Ihr LinkedIn-Profil]  
-🐙 **GitHub:** [nakzyhyh](https://github.com/nakzyhyh)  
-
----
-
----
+Wahl‑E steht für Transparenz, datenbasierte Analyse und fundierte politische Entscheidungsfindung. Vertraue auf unsere Technologie und nutze die detaillierten Informationen, um ein umfassendes Bild der politischen Landschaft zu erhalten – so triffst du deine Wahl ganz bewusst und gut informiert.
